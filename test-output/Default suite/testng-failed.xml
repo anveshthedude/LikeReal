@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="justtests.ExcelTest">
+      <class name="com.sa.test.pages.Loginpagetest">
         <methods>
-          <include name="exceltest"/>
+          <include name="verify"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- justtests.ExcelTest -->
+      </class> <!-- com.sa.test.pages.Loginpagetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

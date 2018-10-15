@@ -31,13 +31,13 @@ public class LoginPage extends TestBase { // incridible111112222222
 	}
 
 	// Test methods
-	public String ValidateloginPagetitle() {
+	public HomePage ValidateloginPagetitle() throws Exception {
 
 		username.sendKeys(read.getProperty("username"));
 		password.sendKeys(read.getProperty("password"));
 		loginbtn.click();
 
-		return driver.getTitle();
+		return new HomePage();
 
 	}
 

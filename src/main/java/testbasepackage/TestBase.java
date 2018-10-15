@@ -7,18 +7,17 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import utilities.Utilities;
 
 public class TestBase {
 
-	public static WebDriver driver = null;
+	public static WebDriver driver;
 	public static Properties read;
 
 	public TestBase() throws IOException {
 
-		String file = "air";
+		String file = "win";
 
 		if (file.equals("air")) {
 			read = new Properties();
@@ -29,7 +28,7 @@ public class TestBase {
 			read = new Properties();
 
 			FileInputStream pi = new FileInputStream(
-					"C:\\Users\\anvesh.durgam\\git\\anveshmain3\\siteadmin\\src\\newpackage\\My.properties");
+					"C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\properties\\Properties");
 			read.load(pi);
 
 		}
@@ -38,31 +37,20 @@ public class TestBase {
 
 	public static void initizlization() {
 
-		String browsername = read.getProperty("browser");
+		String laptop = read.getProperty("laptop");
+		
+		if (laptop.equalsIgnoreCase("mac")) {
+			System.setProperty("webdriver.chrome.driver",
 
-		String laptop = read.getProperty("system");
-
-		if (browsername.equals("chrome")) {
-			if (laptop.equals("mac")) {
-				System.setProperty("webdriver.chrome.driver",
-
-						"/Users/anveshdurgam/Downloads/chromedriver");
-				driver = new ChromeDriver();
-
-			} else
-				System.setProperty("webdriver.chrome.driver",
-						"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
-
-			// System.setProperty("webdriver.chrome.driver",
-			//
-			// "/Users/anveshdurgam/Downloads/chromedriver");
-
+					"/Users/anveshdurgam/Downloads/chromedriver");
 			driver = new ChromeDriver();
-			// github.com/anveshthedude/anveshmain2.git
 
 		} else {
-			driver = new FirefoxDriver();
+			System.setProperty("webdriver.chrome.driver",
+					"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver();
 		}
+
 		driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();

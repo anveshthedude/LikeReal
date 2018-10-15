@@ -20,9 +20,10 @@ public class Loginpagetest extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setup() {
-
+	public void setup() throws IOException {
+		
 		initizlization();
+		
 
 	}
 
