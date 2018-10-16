@@ -25,8 +25,8 @@ public class CorrectServiceCostTest extends TestBase {
 
 	@BeforeMethod
 	public void setup() throws Exception {
-		loginpage = new LoginPage();
 		initizlization();
+		loginpage = new LoginPage();	
 		loginpage.ValidateloginPagetitle();
 
 	}
