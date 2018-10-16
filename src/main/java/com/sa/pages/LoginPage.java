@@ -23,7 +23,7 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	@FindBy(className = "btn-form")
 	static WebElement loginbtn;
-	
+
 	@FindBy(xpath = "//img[@alt='AppointmentPlus Enterprise Scheduling Software']")
 	static WebElement logo;
 
@@ -35,7 +35,7 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	// Test methods
 	public HomePage ValidateloginPagetitle() throws Exception {
-
+		System.out.println("name is    " + read.getProperty("username"));
 		username.sendKeys(read.getProperty("username"));
 		password.sendKeys(read.getProperty("password"));
 		loginbtn.click();
@@ -43,10 +43,10 @@ public class LoginPage extends TestBase { // incridible111112222222
 		return new HomePage();
 
 	}
-	
-	public boolean verifycompanylogo(){
+
+	public boolean verifycompanylogo() {
 		return logo.isDisplayed();
-		
+
 	}
 
 }

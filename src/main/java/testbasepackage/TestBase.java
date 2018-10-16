@@ -51,7 +51,7 @@ public class TestBase {
 			driver = new ChromeDriver();
 		}
 
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);

@@ -1,41 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29095" started-at="2018-10-16T06:56:41Z" finished-at="2018-10-16T06:57:10Z">
+  <suite name="Default suite" duration-ms="13283" started-at="2018-10-16T09:29:33Z" finished-at="2018-10-16T09:29:46Z">
     <groups>
-      <group name="loginpages">
-        <method signature="Loginpagetest.aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="aplogotest" class="com.sa.test.pages.Loginpagetest"/>
-        <method signature="Loginpagetest.verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="verify" class="com.sa.test.pages.Loginpagetest"/>
-      </group> <!-- loginpages -->
     </groups>
-    <test name="Default test" duration-ms="29095" started-at="2018-10-16T06:56:41Z" finished-at="2018-10-16T06:57:10Z">
-      <class name="com.sa.test.pages.Loginpagetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="setup" is-config="true" duration-ms="7191" started-at="2018-10-16T12:26:41Z" finished-at="2018-10-16T12:26:48Z">
+    <test name="Default test" duration-ms="13283" started-at="2018-10-16T09:29:33Z" finished-at="2018-10-16T09:29:46Z">
+      <class name="com.sa.test.pages.CorrectServiceCostTest">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@20e2cbe0]" name="setup" is-config="true" duration-ms="0" started-at="2018-10-16T14:59:33Z" finished-at="2018-10-16T14:59:33Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.sa.pages.LoginPage.ValidateloginPagetitle(LoginPage.java:39)
+	at com.sa.test.pages.CorrectServiceCostTest.setup(CorrectServiceCostTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="aplogotest" duration-ms="86" started-at="2018-10-16T12:26:48Z" finished-at="2018-10-16T12:26:48Z">
+        <test-method status="SKIP" signature="updatesetting()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@20e2cbe0]" name="updatesetting" duration-ms="1" started-at="2018-10-16T14:59:46Z" finished-at="2018-10-16T14:59:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- aplogotest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="close" is-config="true" duration-ms="675" started-at="2018-10-16T12:26:48Z" finished-at="2018-10-16T12:26:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="setup" is-config="true" duration-ms="5806" started-at="2018-10-16T12:26:49Z" finished-at="2018-10-16T12:26:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="verify" duration-ms="14608" started-at="2018-10-16T12:26:55Z" finished-at="2018-10-16T12:27:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="close" is-config="true" duration-ms="709" started-at="2018-10-16T12:27:09Z" finished-at="2018-10-16T12:27:10Z">
+        </test-method> <!-- updatesetting -->
+        <test-method status="SKIP" signature="close()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@20e2cbe0]" name="close" is-config="true" duration-ms="0" started-at="2018-10-16T14:59:46Z" finished-at="2018-10-16T14:59:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.sa.test.pages.Loginpagetest -->
+      </class> <!-- com.sa.test.pages.CorrectServiceCostTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
