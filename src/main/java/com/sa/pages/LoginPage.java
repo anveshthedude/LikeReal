@@ -23,6 +23,9 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	@FindBy(className = "btn-form")
 	static WebElement loginbtn;
+	
+	@FindBy(xpath = "//img[@alt='AppointmentPlus Enterprise Scheduling Software']")
+	static WebElement logo;
 
 	public LoginPage() throws IOException {
 
@@ -39,6 +42,11 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 		return new HomePage();
 
+	}
+	
+	public boolean verifycompanylogo(){
+		return logo.isDisplayed();
+		
 	}
 
 }
