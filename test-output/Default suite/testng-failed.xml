@@ -6,7 +6,6 @@
       <class name="com.sa.test.pages.CorrectServiceCostTest">
         <methods>
           <include name="close"/>
-          <include name="updatesetting"/>
           <include name="setup"/>
           <include name="servicecosttest"/>
         </methods>

@@ -38,7 +38,7 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 
-	@Test
+	//@Test(priority=2)
 	public void updatesetting() throws Exception {
 		homepage = new HomePage();
 		settingspage=homepage.clickonsettings();
@@ -48,13 +48,14 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 	
-	@Test(dependsOnMethods={"updatesetting"})
+	@Test  //(priority=1,dependsOnMethods={"updatesetting"})
 	public void servicecosttest() throws Exception{
 		homepage = new HomePage();
 		homepage.CVlink();
 		cvlinkpage = new CVLinkpage();
 		cvlinkpage.gotocv();	
 		customerview = new CustomerView();
+		customerview.cvlogin();
 		customerview.clickonservicestab();
 		cvservicespage.verifyservicecost();
 		customerview.clickonbooknow();

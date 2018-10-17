@@ -29,10 +29,12 @@ public class CVLinkpage extends TestBase {
 		utilities.framemid();
 		previewlinkurl.click();
 		Set<String> windows = driver.getWindowHandles();
-		Iterator<String> win = windows.iterator();
-		String custview = win.next();
-		String siteadmi = win.next();
-		driver.switchTo().window(custview);
+		Iterator<String> s1 = windows.iterator();
+		String siteadmin = s1.next();	
+		driver.switchTo().window(siteadmin);
+		//System.out.println(driver.getTitle());
+		String custom =s1.next();	
+		driver.switchTo().frame(custom);
 		System.out.println(driver.getTitle());
 		return new CustomerView();
 
