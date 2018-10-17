@@ -8,6 +8,7 @@
           <include name="close"/>
           <include name="updatesetting"/>
           <include name="setup"/>
+          <include name="servicecosttest"/>
         </methods>
       </class> <!-- com.sa.test.pages.CorrectServiceCostTest -->
     </classes>

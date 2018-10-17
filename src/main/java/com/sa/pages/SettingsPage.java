@@ -12,10 +12,7 @@ import utilities.Utilities;
 
 public class SettingsPage extends TestBase {
 	Utilities utilities;
-
-	public SettingsPage() throws IOException {
-		PageFactory.initElements(driver, SettingsPage.class);
-	}
+	SettingsPage settingspage;
 
 	@FindBy(xpath = "//a[@id='fl-navtab-item-company-id']")
 	public static WebElement settings;
@@ -32,11 +29,17 @@ public class SettingsPage extends TestBase {
 	@FindBy(xpath = "//td[@class='success_message']")
 	public static WebElement updatedsucess;
 
-	public boolean changeprefs() {
+	@FindBy(xpath = "//input[@value='Edit']")
+	public static WebElement editsettings;
 
-		utilities.framehead();
-		settings.click();
+	public SettingsPage() throws IOException {
+		PageFactory.initElements(driver, this);
+	}
+
+	public boolean changeprefs() throws Exception {
+
 		driver.switchTo().defaultContent();
+		utilities = new Utilities();
 		utilities.frameside();
 		customerviewpref.click();
 		driver.switchTo().defaultContent();
@@ -47,8 +50,11 @@ public class SettingsPage extends TestBase {
 		update.click();
 		boolean updated = updatedsucess.isDisplayed();
 		System.out.println("Pref is" + updated);
+		editsettings.click();
 		return custpref46.isSelected();
 
 	}
+	
+	
 
 }

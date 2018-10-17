@@ -80,6 +80,7 @@ public class ServicesTab extends TestBase {
 
 	public void SignOut() throws IOException {
 		utilities = new Utilities();
+		
 		utilities.framehead();
 		signout.click();
 

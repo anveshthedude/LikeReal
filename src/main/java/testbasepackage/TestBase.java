@@ -27,8 +27,7 @@ public class TestBase {
 		} else {
 			read = new Properties();
 
-			FileInputStream pi = new FileInputStream(
-					"C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\properties\\Properties");
+			FileInputStream pi = new FileInputStream("C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\properties\\Properties");
 			read.load(pi);
 
 		}

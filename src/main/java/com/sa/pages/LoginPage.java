@@ -37,7 +37,7 @@ public class LoginPage extends TestBase { // incridible111112222222
 	public HomePage ValidateloginPagetitle() throws Exception {
 		
 		
-		System.out.println("name is    " + read.getProperty("username"));
+		//System.out.println("name is    " + read.getProperty("username"));
 		username.sendKeys(read.getProperty("username"));
 		password.sendKeys(read.getProperty("password"));
 		loginbtn.click();
