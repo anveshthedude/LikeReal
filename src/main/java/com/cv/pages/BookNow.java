@@ -10,7 +10,7 @@ import testbasepackage.TestBase;
 
 public class BookNow extends TestBase{
 	
-	@FindBy(xpath = "//div[@class='item-name']")
+	@FindBy(xpath = "//a[@class='selection-item']")
 	public static WebElement selectchild;
 	
 	@FindBy(xpath = "//span[contains(text(),'1h - $20.00')]")

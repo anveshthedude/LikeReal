@@ -61,11 +61,14 @@ public class CorrectServiceCostTest extends TestBase {
 		customerview.cvlogin();
 		customerview.clickonservicestab();
 		cvservicespage = new CVServicesPage();
-		System.out.println(cvservicespage.verifyservicecost());
+		String servicecost = cvservicespage.verifyservicecost();
+		System.out.println(servicecost);
 		customerview.clickonbooknow();
 		booknow = new BookNow();
-		booknow.checkstaffprice();
+		String staffservicecost = booknow.checkstaffprice();
+		Assert.assertEquals(servicecost, staffservicecost);
 		
+
 	}
 
 	@AfterMethod
