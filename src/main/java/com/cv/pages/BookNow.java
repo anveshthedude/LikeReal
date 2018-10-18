@@ -21,9 +21,9 @@ public class BookNow extends TestBase{
 		
 	}
 	
-	public void checkstaffprice(){
+	public String checkstaffprice(){
 		selectchild.click();
-		servicecostforstaff.getText();
+		return servicecostforstaff.getText();
 		
 	}
 

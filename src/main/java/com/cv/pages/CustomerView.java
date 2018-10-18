@@ -3,6 +3,7 @@ package com.cv.pages;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -40,15 +41,23 @@ public class CustomerView extends TestBase {
 	}
 
 	public CVServicesPage clickonservicestab() throws Exception {
+		
+		/*Actions action = new Actions(driver);
+		action.doubleClick(cvservicetab).build().perform();*/
+		
 		cvservicetab.click();
+		Thread.sleep(5000);
 		return new CVServicesPage();
 
 	}
 
-	public void clickonbooknow() {
+	public BookNow clickonbooknow() throws IOException {
 		bookappts.click();
+		return new BookNow();
 
 	}
+
+	
 
 	public void cvlogin() {
 		getstarted.click();

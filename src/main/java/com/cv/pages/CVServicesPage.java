@@ -20,6 +20,7 @@ public class CVServicesPage extends TestBase {
 
 	public String verifyservicecost() {
 		String price = servicecost.getText();
+
 		return price;
 
 	}

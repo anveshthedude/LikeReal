@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.cv.pages.BookNow;
 import com.cv.pages.CVServicesPage;
 import com.cv.pages.CustomerView;
 import com.sa.pages.CVLinkpage;
@@ -25,6 +26,8 @@ public class CorrectServiceCostTest extends TestBase {
 	CVLinkpage cvlinkpage;
 	CustomerView customerview;
 	CVServicesPage cvservicespage;
+	BookNow booknow;
+
 	public CorrectServiceCostTest() throws IOException {
 		super();
 
@@ -33,35 +36,35 @@ public class CorrectServiceCostTest extends TestBase {
 	@BeforeMethod
 	public void setup() throws Exception {
 		initizlization();
-		loginpage = new LoginPage();	
-		homepage=loginpage.ValidateloginPagetitle();
+		loginpage = new LoginPage();
+		homepage = loginpage.ValidateloginPagetitle();
 
 	}
 
-	//@Test(priority=2)
+	// @Test(priority=2)
 	public void updatesetting() throws Exception {
 		homepage = new HomePage();
-		settingspage=homepage.clickonsettings();
+		settingspage = homepage.clickonsettings();
 		settingspage = new SettingsPage();
 		System.out.println("Prefernce  " + settingspage.changeprefs());
 		Assert.assertTrue(true);
 
 	}
-	
-	@Test  //(priority=1,dependsOnMethods={"updatesetting"})
-	public void servicecosttest() throws Exception{
+
+	@Test // (priority=1,dependsOnMethods={"updatesetting"})
+	public void servicecosttest() throws Exception {
 		homepage = new HomePage();
 		homepage.CVlink();
 		cvlinkpage = new CVLinkpage();
-		cvlinkpage.gotocv();	
+		cvlinkpage.gotocv();
 		customerview = new CustomerView();
 		customerview.cvlogin();
 		customerview.clickonservicestab();
-		cvservicespage.verifyservicecost();
+		cvservicespage = new CVServicesPage();
+		System.out.println(cvservicespage.verifyservicecost());
 		customerview.clickonbooknow();
-		
-		
-		
+		booknow = new BookNow();
+		booknow.checkstaffprice();
 		
 	}
 
@@ -71,8 +74,6 @@ public class CorrectServiceCostTest extends TestBase {
 		driver.switchTo().defaultContent();
 		servicestab.SignOut();
 		driver.quit();
-		
-		
 
 	}
 
