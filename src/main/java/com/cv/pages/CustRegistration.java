@@ -10,8 +10,6 @@ import org.testng.annotations.Test;
 
 public class CustRegistration {
 
-
-	
 	@Test
 	public void testdata() throws Exception {
 
@@ -37,8 +35,6 @@ public class CustRegistration {
 			gotdata.add(data);
 
 		}
-
-		
 
 	}
 }
