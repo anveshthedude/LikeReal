@@ -1,59 +1,44 @@
 package com.cv.pages;
 
-import java.io.IOException;
+import java.io.FileInputStream;
+import java.util.ArrayList;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
 
-import testbasepackage.TestBase;
+public class CustRegistration {
 
-public class CustRegistration extends TestBase {
 
-	@FindBy(xpath = "//input[@value='Create an Account']")
-	public static WebElement signupbtn;
+	
+	@Test
+	public void testdata() throws Exception {
 
-	@FindBy(xpath = "//input[@name='first_name']")
-	public static WebElement firstname;
+		ArrayList<Object> gotdata = new ArrayList<Object>();
 
-	@FindBy(xpath = "//input[@name='last_name']")
-	public static WebElement lastname;
+		FileInputStream files = new FileInputStream(
+				"C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\testdata\\Test.xlsx");
 
-	@FindBy(xpath = "//input[@name='night_phone']")
-	public static WebElement evenphon;
+		XSSFWorkbook book = new XSSFWorkbook(files);
+		System.out.println("this is sheet" + book.getSheet("signup"));
+		XSSFSheet sheet = book.getSheet("signup");
 
-	@FindBy(xpath = "//input[@name='email']")
-	public static WebElement email;
+		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 
-	@FindBy(xpath = "//option[@value='1067']")
-	public static WebElement heards;
+			String firstname = sheet.getRow(i).getCell(0).getStringCellValue();
+			String lastname = sheet.getRow(i).getCell(1).getStringCellValue();
+			String email = sheet.getRow(i).getCell(2).getStringCellValue();
+			XSSFCell eveningphone = sheet.getRow(i).getCell(3);
+			String notes = sheet.getRow(i).getCell(4).getStringCellValue();
 
-	@FindBy(xpath = "//input[@name='contact_okay' and @value='yes']")
-	public static WebElement contactokQ;
+			Object[] data = { firstname, lastname, email, eveningphone, notes };
+			System.out.println(firstname + lastname + email + eveningphone + notes);
+			gotdata.add(data);
 
-	@FindBy(xpath = "//input[@name='email_okay' and @value='no']")
-	public static WebElement emailokQ;
+		}
 
-	public CustRegistration() throws IOException {
-		PageFactory.initElements(driver, this);
+		
 
 	}
-	
-	public void addcust(String firstname, String lastname, String evenphon, 
-			String email, String heards, String contactokQ,String emailokQ ){
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
