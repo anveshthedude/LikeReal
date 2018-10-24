@@ -15,7 +15,7 @@ public class Constructor {
 		
 	}
 
-	public Constructor(int a){
+	public Constructor(int a){ //for commit
 		this.two="three";
 		String two="four";
 		System.out.println(this.two);
