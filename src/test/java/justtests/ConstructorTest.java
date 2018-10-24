@@ -4,7 +4,10 @@ public class ConstructorTest {
 	
 	
 	public static void main(String[] args) {
-		Constructor cal = new Constructor();	
+		Constructor cal = new Constructor(10);
+		
+	
+		
 	}
 	
 	
