@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="8" passed="7">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="141202" started-at="2018-10-24T08:55:31Z" finished-at="2018-10-24T08:57:53Z">
+  <suite name="Default suite" duration-ms="71317" started-at="2018-10-24T10:53:28Z" finished-at="2018-10-24T10:54:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="141202" started-at="2018-10-24T08:55:31Z" finished-at="2018-10-24T08:57:53Z">
+    <test name="Default test" duration-ms="71317" started-at="2018-10-24T10:53:28Z" finished-at="2018-10-24T10:54:40Z">
       <class name="justtests.ExcelTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="13266" started-at="2018-10-24T14:25:32Z" finished-at="2018-10-24T14:25:45Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="12517" started-at="2018-10-24T16:23:29Z" finished-at="2018-10-24T16:23:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4294" started-at="2018-10-24T14:25:45Z" data-provider="thisisdata" finished-at="2018-10-24T14:25:50Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="5072" started-at="2018-10-24T16:23:42Z" data-provider="thisisdata" finished-at="2018-10-24T16:23:47Z">
           <params>
             <param index="0">
               <value>
@@ -28,19 +28,24 @@
                 <![CDATA[ap@g.com]]>
               </value>
             </param>
+            <param index="3">
+              <value>
+                <![CDATA[123-1]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="765" started-at="2018-10-24T14:25:50Z" finished-at="2018-10-24T14:25:51Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="769" started-at="2018-10-24T16:23:47Z" finished-at="2018-10-24T16:23:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11289" started-at="2018-10-24T14:25:51Z" finished-at="2018-10-24T14:26:02Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11443" started-at="2018-10-24T16:23:48Z" finished-at="2018-10-24T16:23:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4355" started-at="2018-10-24T14:26:02Z" data-provider="thisisdata" finished-at="2018-10-24T14:26:06Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4756" started-at="2018-10-24T16:23:59Z" data-provider="thisisdata" finished-at="2018-10-24T16:24:04Z">
           <params>
             <param index="0">
               <value>
@@ -57,19 +62,24 @@
                 <![CDATA[ap1@g.com]]>
               </value>
             </param>
+            <param index="3">
+              <value>
+                <![CDATA[124-2]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="712" started-at="2018-10-24T14:26:06Z" finished-at="2018-10-24T14:26:07Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="804" started-at="2018-10-24T16:24:04Z" finished-at="2018-10-24T16:24:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11644" started-at="2018-10-24T14:26:07Z" finished-at="2018-10-24T14:26:19Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11141" started-at="2018-10-24T16:24:05Z" finished-at="2018-10-24T16:24:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4492" started-at="2018-10-24T14:26:19Z" data-provider="thisisdata" finished-at="2018-10-24T14:26:23Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="5897" started-at="2018-10-24T16:24:16Z" data-provider="thisisdata" finished-at="2018-10-24T16:24:22Z">
           <params>
             <param index="0">
               <value>
@@ -86,19 +96,24 @@
                 <![CDATA[ap2@g.com]]>
               </value>
             </param>
+            <param index="3">
+              <value>
+                <![CDATA[125-3]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="1029" started-at="2018-10-24T14:26:23Z" finished-at="2018-10-24T14:26:24Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="802" started-at="2018-10-24T16:24:22Z" finished-at="2018-10-24T16:24:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11574" started-at="2018-10-24T14:26:24Z" finished-at="2018-10-24T14:26:36Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11910" started-at="2018-10-24T16:24:22Z" finished-at="2018-10-24T16:24:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4371" started-at="2018-10-24T14:26:36Z" data-provider="thisisdata" finished-at="2018-10-24T14:26:40Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4785" started-at="2018-10-24T16:24:34Z" data-provider="thisisdata" finished-at="2018-10-24T16:24:39Z">
           <params>
             <param index="0">
               <value>
@@ -115,191 +130,16 @@
                 <![CDATA[ap3@g.com]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="724" started-at="2018-10-24T14:26:40Z" finished-at="2018-10-24T14:26:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="12534" started-at="2018-10-24T14:26:41Z" finished-at="2018-10-24T14:26:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="623" started-at="2018-10-24T14:26:53Z" data-provider="thisisdata" finished-at="2018-10-24T14:26:54Z">
-          <params>
-            <param index="0">
+            <param index="3">
               <value>
-                <![CDATA[ap5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ap5]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ap4@g.com]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: Element <input class="button1" type="submit" name="registrationsubmit" value="Create Account"> is not clickable at point (270, 570). Other element would receive the click: <div class="loader" style="opacity: 2.19323e-05;"></div>
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
-System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANVESH~1.DUR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
-Session ID: 1c3e316c38baa27d0e032ef0927f9390]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <input class="button1" type="submit" name="registrationsubmit" value="Create Account"> is not clickable at point (270, 570). Other element would receive the click: <div class="loader" style="opacity: 2.19323e-05;"></div>
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
-System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANVESH~1.DUR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
-Session ID: 1c3e316c38baa27d0e032ef0927f9390
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at justtests.ExcelTest.signuptest(ExcelTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="739" started-at="2018-10-24T14:26:54Z" finished-at="2018-10-24T14:26:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="13564" started-at="2018-10-24T14:26:55Z" finished-at="2018-10-24T14:27:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4733" started-at="2018-10-24T14:27:08Z" data-provider="thisisdata" finished-at="2018-10-24T14:27:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ap6]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ap6]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ap5@g.com]]>
+                <![CDATA[126-4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="873" started-at="2018-10-24T14:27:13Z" finished-at="2018-10-24T14:27:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="12221" started-at="2018-10-24T14:27:14Z" finished-at="2018-10-24T14:27:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="4407" started-at="2018-10-24T14:27:26Z" data-provider="thisisdata" finished-at="2018-10-24T14:27:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ap7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ap7]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ap6@g.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="726" started-at="2018-10-24T14:27:30Z" finished-at="2018-10-24T14:27:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@1593948d]" name="setup" is-config="true" duration-ms="11005" started-at="2018-10-24T14:27:31Z" finished-at="2018-10-24T14:27:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@1593948d]" name="signuptest" duration-ms="9724" started-at="2018-10-24T14:27:42Z" data-provider="thisisdata" finished-at="2018-10-24T14:27:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ap8]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ap8]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ap7@g.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signuptest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="774" started-at="2018-10-24T14:27:52Z" finished-at="2018-10-24T14:27:53Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@1593948d]" name="teardown" is-config="true" duration-ms="734" started-at="2018-10-24T16:24:39Z" finished-at="2018-10-24T16:24:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

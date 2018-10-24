@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -53,13 +54,13 @@ public class ExcelTest extends TestBase {
 	public Iterator<Object> thisisdata() throws Exception {
 		CustRegistration page = new CustRegistration();
 		ArrayList<Object> datalist = page.testdata();
-		//System.out.println(datalist);
+		// System.out.println(datalist);
 		return datalist.iterator();
 
 	}
 
-	@Test(dataProvider="thisisdata")
-	public void signuptest(String firstname, String lastname, String email,int eveningphone) {
+	@Test(dataProvider = "thisisdata")
+	public void signuptest(String firstname, String lastname, String email, String eveningphone) {
 
 		driver.findElement(By.xpath("//input[@name='first_name']")).clear();
 		driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys(firstname);
@@ -73,7 +74,18 @@ public class ExcelTest extends TestBase {
 		driver.findElement(By.xpath("//input[@name='night_phone']")).clear();
 		driver.findElement(By.xpath("//input[@name='night_phone']")).sendKeys(eveningphone);
 
-		driver.findElement(By.xpath("//*[@id='wrapper']/table[3]/tbody/tr[1]/td/table[1]/tbody/tr[2]/td/table/tbody/tr/td/input[2]")).click();
+		WebElement dropdown = driver.findElement(By.xpath("//select[@name='lead_id']"));
+		Select select = new Select(dropdown);
+		select.selectByVisibleText("Internet");
+
+		driver.findElement(By.xpath("//input[@name='contact_okay' and @value='yes']")).click();
+		driver.findElement(By.xpath("//input[@name='email_okay' and @value='yes']")).click();
+		driver.findElement(By.xpath("//input[@name='allow_login' and @value='yes']")).click();
+		driver.findElement(By
+				.xpath("//*[@id='wrapper']/table[3]/tbody/tr[1]/td/table[1]/tbody/tr[2]/td/table/tbody/tr/td/input[2]"))
+				.click();
+
+		System.out.println(driver.getPageSource().contains("//font[@color='#090909']"));
 
 		driver.navigate().refresh();
 
