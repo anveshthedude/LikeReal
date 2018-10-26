@@ -24,7 +24,7 @@ public class Staffaccesstypetest extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setup2() throws Exception {
+	public void setup() throws Exception {
 
 		initizlization();
 		loginpage = new LoginPage();
@@ -33,7 +33,7 @@ public class Staffaccesstypetest extends TestBase {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void verifyifaccesstypeselected() throws IOException, InterruptedException {
 
 		boolean nine = stafftabpage.CheckifAccesstypeIsSelected();
@@ -41,10 +41,12 @@ public class Staffaccesstypetest extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void VerifyStaffDaysUpdatetest() throws IOException {
 		// stafftabpage = new StaffTabPage();
-		stafftabpage.UpdateDaysOff();
+		boolean result = stafftabpage.UpdateDaysOff();
+		Assert.assertEquals(result, true);
+
 	}
 
 	@AfterMethod

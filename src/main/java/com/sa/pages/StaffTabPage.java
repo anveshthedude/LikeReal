@@ -47,22 +47,18 @@ public class StaffTabPage extends TestBase {
 
 	public boolean CheckifAccesstypeIsSelected() throws InterruptedException, IOException {
 
-		utilities = new Utilities();
-
-		Thread.sleep(3000);
-
-		utilities.framehead();
-		// driver.switchTo().frame("header");
+		utilities = new Utilities();	
+		utilities.framehead();		
 		stafftab.click();
 		driver.switchTo().defaultContent();
 		utilities.framemid();
-		StaffTabPage.selectstaff("AP, TEST (TEST1)");
+		StaffTabPage.selectstaff("aapptest");
 		System.out.println(accestype.isSelected());
 		return true;
 
 	}
 
-	public void UpdateDaysOff() throws IOException {
+	public boolean UpdateDaysOff() throws IOException {
 
 		utilities = new Utilities();
 
@@ -78,6 +74,7 @@ public class StaffTabPage extends TestBase {
 		utilities.framemid();
 		update.click();
 		boolean good = sucessmessage.isDisplayed();
+		
 
 		if (sucessmessage.isDisplayed()) {
 
@@ -85,12 +82,12 @@ public class StaffTabPage extends TestBase {
 
 		} else
 			System.out.println("Schedule may be not updated");
-
+		return good;
 	}
 
 	public static void selectstaff(String staffname) {
 
-		driver.findElement(By.xpath("//a[text()='" + staffname + "']")).click();
+		driver.findElement(By.xpath("//a[text()='"+staffname+"']")).click();
 
 	}
 

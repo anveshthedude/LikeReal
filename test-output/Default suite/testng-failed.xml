@@ -6,8 +6,8 @@
       <class name="com.sa.test.pages.Staffaccesstypetest">
         <methods>
           <include name="verifyifaccesstypeselected"/>
-          <include name="setup2"/>
-          <include name="VerifyStaffDaysUpdatetest"/>
+          <include name="setup"/>
+          <include name="close"/>
         </methods>
       </class> <!-- com.sa.test.pages.Staffaccesstypetest -->
     </classes>
