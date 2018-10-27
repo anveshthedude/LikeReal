@@ -28,7 +28,7 @@ public class TestBase {
 			read = new Properties();
 
 			FileInputStream pi = new FileInputStream("C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\properties\\Properties");
-			read.load(pi);
+			read.load(pi);							
 
 		}
 
@@ -55,7 +55,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
-		driver.get(read.getProperty("cvurl"));
+		driver.get(read.getProperty("url"));
 
 	}
 

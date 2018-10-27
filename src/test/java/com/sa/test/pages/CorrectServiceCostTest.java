@@ -41,7 +41,7 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 
-	// @Test(priority=2)
+	//@Test(priority = 2)
 	public void updatesetting() throws Exception {
 		homepage = new HomePage();
 		settingspage = homepage.clickonsettings();
@@ -51,7 +51,7 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 
-	@Test // (priority=1,dependsOnMethods={"updatesetting"})
+	@Test//(priority = 1,dependsOnMethods = {"updatesetting"})
 	public void servicecosttest() throws Exception {
 		homepage = new HomePage();
 		homepage.CVlink();
@@ -67,7 +67,6 @@ public class CorrectServiceCostTest extends TestBase {
 		booknow = new BookNow();
 		String staffservicecost = booknow.checkstaffprice();
 		Assert.assertEquals(servicecost, staffservicecost);
-		
 
 	}
 
