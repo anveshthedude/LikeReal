@@ -13,6 +13,8 @@ import testbasepackage.TestBase;
 
 public class CustRegistration extends TestBase {
 
+	FileInputStream files;
+
 	public CustRegistration() throws IOException {
 		super();
 
@@ -23,8 +25,14 @@ public class CustRegistration extends TestBase {
 
 		ArrayList<Object> gotdata = new ArrayList<Object>();
 
-		FileInputStream files = new FileInputStream(
-				"C:\\Users\\anvesh.durgam\\git\\AutoPractice\\src\\main\\java\\com\\testdata\\Test.xlsx");
+		try {
+
+			files = new FileInputStream("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+		} catch (Exception e) {
+			e.getStackTrace();
+
+		}
+		System.out.println("Excel file is incorrect");
 
 		XSSFWorkbook book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("signup"));

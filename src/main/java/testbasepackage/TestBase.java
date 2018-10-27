@@ -17,12 +17,12 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 
-		String file = "win";
+		String file = "air";
 
 		if (file.equals("air")) {
 			read = new Properties();
 			FileInputStream pi = new FileInputStream(
-					"/Users/anveshdurgam/git/anveshmain8/siteadmin/src/newpackage/My.properties");
+					"/Users/anveshdurgam/git/LikeReal/src/main/java/com/properties/Properties");
 			read.load(pi);
 		} else {
 			read = new Properties();
@@ -39,9 +39,7 @@ public class TestBase {
 		String laptop = read.getProperty("laptop");
 		
 		if (laptop.equalsIgnoreCase("mac")) {
-			System.setProperty("webdriver.chrome.driver",
-
-					"/Users/anveshdurgam/Downloads/chromedriver");
+			System.setProperty("webdriver.chrome.driver","Users/anveshdurgam/Downloads/chromedriver");
 			driver = new ChromeDriver();
 
 		} else {
