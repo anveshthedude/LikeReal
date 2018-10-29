@@ -27,18 +27,19 @@ public class CustRegistration extends TestBase {
 
 		try {
 
-			files = new FileInputStream("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+			files = new FileInputStream(
+					"C:\\Users\\anvesh.durgam\\git\\LikeRealP\\src\\main\\java\\com\\testdata\\Test.xlsx");
 		} catch (Exception e) {
 			e.getStackTrace();
+			System.out.println("Excel file is incorrect");
 
 		}
-		System.out.println("Excel file is incorrect");
 
 		XSSFWorkbook book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("signup"));
 		XSSFSheet sheet = book.getSheet("signup");
 
-		for (int i = 1; i <= 4; i++) {
+		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 
 			String firstname = sheet.getRow(i).getCell(0).getStringCellValue();
 			String lastname = sheet.getRow(i).getCell(1).getStringCellValue();

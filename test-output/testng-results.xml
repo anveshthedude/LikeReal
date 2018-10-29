@@ -1,41 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40986" started-at="2018-10-29T04:57:01Z" finished-at="2018-10-29T04:57:41Z">
+  <suite name="Default suite" duration-ms="134301" started-at="2018-10-29T10:24:24Z" finished-at="2018-10-29T10:26:38Z">
     <groups>
-      <group name="loginpages">
-        <method signature="Loginpagetest.aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="aplogotest" class="com.sa.test.pages.Loginpagetest"/>
-        <method signature="Loginpagetest.verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="verify" class="com.sa.test.pages.Loginpagetest"/>
-      </group> <!-- loginpages -->
     </groups>
-    <test name="Default test" duration-ms="40986" started-at="2018-10-29T04:57:01Z" finished-at="2018-10-29T04:57:41Z">
-      <class name="com.sa.test.pages.Loginpagetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="9195" started-at="2018-10-29T10:27:01Z" finished-at="2018-10-29T10:27:10Z">
+    <test name="Default test" duration-ms="134301" started-at="2018-10-29T10:24:24Z" finished-at="2018-10-29T10:26:38Z">
+      <class name="justtests.ExcelTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="13715" started-at="2018-10-29T15:54:24Z" finished-at="2018-10-29T15:54:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="aplogotest" duration-ms="80" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:10Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4894" started-at="2018-10-29T15:54:38Z" data-provider="thisisdata" finished-at="2018-10-29T15:54:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aP1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123-1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- aplogotest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="102" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:10Z">
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="874" started-at="2018-10-29T15:54:43Z" finished-at="2018-10-29T15:54:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="7367" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:17Z">
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="11227" started-at="2018-10-29T15:54:44Z" finished-at="2018-10-29T15:54:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="verify" duration-ms="24117" started-at="2018-10-29T10:27:17Z" finished-at="2018-10-29T10:27:41Z">
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4708" started-at="2018-10-29T15:54:55Z" data-provider="thisisdata" finished-at="2018-10-29T15:55:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap1@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[124-2]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="104" started-at="2018-10-29T10:27:41Z" finished-at="2018-10-29T10:27:41Z">
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="764" started-at="2018-10-29T15:55:00Z" finished-at="2018-10-29T15:55:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.sa.test.pages.Loginpagetest -->
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="10926" started-at="2018-10-29T15:55:01Z" finished-at="2018-10-29T15:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4527" started-at="2018-10-29T15:55:12Z" data-provider="thisisdata" finished-at="2018-10-29T15:55:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap2@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[125-3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="748" started-at="2018-10-29T15:55:16Z" finished-at="2018-10-29T15:55:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="10293" started-at="2018-10-29T15:55:17Z" finished-at="2018-10-29T15:55:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4620" started-at="2018-10-29T15:55:27Z" data-provider="thisisdata" finished-at="2018-10-29T15:55:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap3@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[126-4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="734" started-at="2018-10-29T15:55:32Z" finished-at="2018-10-29T15:55:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="10737" started-at="2018-10-29T15:55:33Z" finished-at="2018-10-29T15:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4693" started-at="2018-10-29T15:55:43Z" data-provider="thisisdata" finished-at="2018-10-29T15:55:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap5]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap4@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[127-5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="752" started-at="2018-10-29T15:55:48Z" finished-at="2018-10-29T15:55:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="12121" started-at="2018-10-29T15:55:49Z" finished-at="2018-10-29T15:56:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4612" started-at="2018-10-29T15:56:01Z" data-provider="thisisdata" finished-at="2018-10-29T15:56:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap5@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[128-6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="740" started-at="2018-10-29T15:56:05Z" finished-at="2018-10-29T15:56:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="11272" started-at="2018-10-29T15:56:06Z" finished-at="2018-10-29T15:56:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4537" started-at="2018-10-29T15:56:17Z" data-provider="thisisdata" finished-at="2018-10-29T15:56:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap6@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[129-7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="724" started-at="2018-10-29T15:56:22Z" finished-at="2018-10-29T15:56:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="setup" is-config="true" duration-ms="10272" started-at="2018-10-29T15:56:23Z" finished-at="2018-10-29T15:56:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signuptest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:justtests.ExcelTest@51565ec2]" name="signuptest" duration-ms="4372" started-at="2018-10-29T15:56:33Z" data-provider="thisisdata" finished-at="2018-10-29T15:56:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ap8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ap8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ap7@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[130-8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signuptest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:justtests.ExcelTest@51565ec2]" name="teardown" is-config="true" duration-ms="735" started-at="2018-10-29T15:56:37Z" finished-at="2018-10-29T15:56:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- justtests.ExcelTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

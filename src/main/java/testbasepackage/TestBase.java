@@ -19,7 +19,7 @@ public class TestBase {
 
 		String file = "air";
 
-		if (file.equals("air")) {
+		if (file.equals("win")) {
 			read = new Properties();
 			FileInputStream pi = new FileInputStream(
 					"/Users/anveshdurgam/git/LikeReal/src/main/java/com/properties/Properties");
@@ -38,7 +38,7 @@ public class TestBase {
 
 		String laptop = read.getProperty("laptop");
 		
-		if (laptop.equalsIgnoreCase("mac")) {
+		if (laptop.equalsIgnoreCase("win")) {
 			System.setProperty("webdriver.chrome.driver","/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
 			driver = new ChromeDriver();
 
@@ -53,7 +53,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
-		driver.get(read.getProperty("url"));
+		driver.get(read.getProperty("cvurl"));
 
 	}
 
