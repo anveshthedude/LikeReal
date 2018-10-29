@@ -39,7 +39,7 @@ public class TestBase {
 		String laptop = read.getProperty("laptop");
 		
 		if (laptop.equalsIgnoreCase("mac")) {
-			System.setProperty("webdriver.chrome.driver","Users/anveshdurgam/Downloads/chromedriver");
+			System.setProperty("webdriver.chrome.driver","/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
 			driver = new ChromeDriver();
 
 		} else {
