@@ -25,6 +25,9 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//a[@id='fl-navtab-item-company-id']")
 	public static WebElement settings;
 
+	@FindBy(xpath = "//a[@id='fl-header-toplinks-signout-id']")
+	public static WebElement signout;
+
 	public HomePage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
@@ -40,13 +43,19 @@ public class HomePage extends TestBase {
 
 	}
 
-	
-
 	public SettingsPage clickonsettings() throws Exception {
 		utilities = new Utilities();
 		utilities.framehead();
 		settings.click();
 		return new SettingsPage();
+	}
+
+	public void signout() throws Exception {
+		driver.switchTo().defaultContent();
+		utilities = new Utilities();
+		utilities.framehead();
+		signout.click();
+
 	}
 
 }

@@ -44,7 +44,7 @@ public class CustRegistration extends TestBase {
 			String firstname = sheet.getRow(i).getCell(0).getStringCellValue();
 			String lastname = sheet.getRow(i).getCell(1).getStringCellValue();
 			String email = sheet.getRow(i).getCell(2).getStringCellValue();
-			String eveningphone = sheet.getRow(i).getCell(3).getStringCellValue();
+			String eveningphone = sheet.getRow(i).getCell(3).getRawValue();
 			Object[] data = { firstname, lastname, email, eveningphone };
 			// System.out.println(firstname + lastname + email + eveningphone +
 			// notes);
