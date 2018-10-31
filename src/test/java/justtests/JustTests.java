@@ -27,6 +27,8 @@ public class JustTests {
 		js.executeScript("document.getElementById('login').value='justlikethat';");
 		js.executeScript("document.getElementById('password').value='justlikethat';");
 		js.executeScript("document.querySelector(\"input[class='btn-form']\").click()");
+		
+		
 		Thread.sleep(3000);
 		driver.switchTo().frame("sidenav");
 

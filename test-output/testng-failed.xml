@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="justtests.ExcelTest">
+      <class name="com.sa.test.pages.CancelApptFromApptHistory">
         <methods>
-          <include name="signuptest"/>
+          <include name="cancelapptfromappthistory"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- justtests.ExcelTest -->
+      </class> <!-- com.sa.test.pages.CancelApptFromApptHistory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

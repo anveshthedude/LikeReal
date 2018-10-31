@@ -1,9 +1,13 @@
 package com.sa.pages;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -48,6 +52,30 @@ public class CustomersTab extends TestBase {
 	@FindBy(xpath = "//div[@id='customerEnterPassword']")
 	public static WebElement updatesucess;
 
+	@FindBy(xpath = "//a[@id='fl-sidenav-appointmenthistory-id']")
+	public static WebElement appthistory;
+
+	@FindBy(xpath = "//*[@id=\"shadow-container\"]/div/div/div/div/table/tbody/tr[4]/td[1]/a")
+	public static WebElement thirdapptinhistory;
+
+	@FindBy(xpath = "//input[@id='cancel-link']")
+	public static WebElement clickoncancelappt;
+
+	@FindBy(xpath = "//input[@id='send_cancel_cust']")
+	public static WebElement custnotifi;
+
+	@FindBy(xpath = "//button[@class='button-text-orange button-small']")
+	public static WebElement orngcancelbutn;
+
+	@FindBy(xpath = "//textarea[@id='reason']")
+	public static WebElement canclreason;
+
+	@FindBy(xpath = "//input[@class='button-text-blue button-small']")
+	public static WebElement canclwithreasonbutn;
+
+	@FindBy(xpath = "//span[@class='success_message']")
+	public static WebElement cancelsucessmess;
+
 	public CustomersTab() throws IOException {
 
 		PageFactory.initElements(driver, this);
@@ -79,9 +107,68 @@ public class CustomersTab extends TestBase {
 		driver.switchTo().alert().accept();
 		boolean updatedsussfully = updatesucess.isDisplayed();
 		driver.manage().window().maximize();
-		update.click();		
+		update.click();
 		return updatedsussfully;
 
+	}
+
+	public boolean cancelappt(String searchhcustomer, String selectcustomername) throws Exception {
+		utilities = new Utilities();
+		utilities.framehead();
+		customerstab.click();
+		driver.switchTo().defaultContent();
+		utilities.framemid();
+		Select select = new Select(searchby);
+		select.selectByVisibleText("All fields in list");
+		searchtext.sendKeys(searchhcustomer);
+		searchbutton.click();
+		String cusxpath = "//a[contains(text(),'";
+		String cusxpath1 = "')]";
+		WebElement name = driver.findElement(By.xpath(cusxpath + selectcustomername + cusxpath1));
+		name.click();
+		driver.switchTo().defaultContent();
+		utilities.frameside();
+		appthistory.click();
+		driver.switchTo().defaultContent();
+		utilities.framemid();
+		thirdapptinhistory.click();
+		Set<String> windows = driver.getWindowHandles();
+
+		Iterator<String> getwindow = windows.iterator();
+		String mainwin = getwindow.next();
+		String maw = getwindow.next();
+
+		driver.switchTo().window(maw);
+
+		clickoncancelappt.click();
+		/*
+		 * custnotifi.click(); if (custnotifi.isSelected() == true) {
+		 * driver.manage().window().maximize();
+		 * driver.findElement(By.xpath("//input[@name='send_cancel_cust']")).click();
+		 * //custnotifi.click();
+		 * 
+		 * } else { System.out.println("notificatoin not found"); }
+		 */
+		// orngcancelbutn.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.querySelector(\"button[class='button-text-orange button-small']\").click()");
+		String cancelreasonwin = getwindow.next();
+		driver.switchTo().window(cancelreasonwin);
+		System.out.println("this is canclwindow " + cancelreasonwin);
+		canclreason.sendKeys("aptest");
+		canclwithreasonbutn.click();
+		driver.switchTo().alert().accept();
+		driver.switchTo().window(maw);
+		boolean cancelled = cancelsucessmess.isDisplayed();
+		if (cancelled == true) {
+			System.out.println("Cancelled" + cancelsucessmess);
+			driver.quit();
+		} else {
+			System.out.println("not cancelled");
+		}
+
+		driver.switchTo().window(mainwin);
+		return cancelled;
 	}
 
 }
