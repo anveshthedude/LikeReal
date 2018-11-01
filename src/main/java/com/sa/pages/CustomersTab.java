@@ -131,16 +131,47 @@ public class CustomersTab extends TestBase {
 		appthistory.click();
 		driver.switchTo().defaultContent();
 		utilities.framemid();
+		//String parent=driver.getWindowHandle();
 		thirdapptinhistory.click();
 		Set<String> windows = driver.getWindowHandles();
-
+		System.out.println("first windows"+windows);
 		Iterator<String> getwindow = windows.iterator();
 		String mainwin = getwindow.next();
 		String maw = getwindow.next();
-
+		
 		driver.switchTo().window(maw);
 
 		clickoncancelappt.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.querySelector(\"button[class='button-text-orange button-small']\").click()");
+		
+		Set<String> windowsss= driver.getWindowHandles();
+		
+		Iterator<String> once = windowsss.iterator();
+		
+			String h1= once.next();
+			String h2=once.next();
+			String h3=once.next();
+			driver.switchTo().window(h3);
+			
+			System.out.println(driver.getTitle());
+		System.out.println("these are windows"+windowsss);
+		
+		
+		
+		/*for(String cancelbtn: windows) {
+			if(!(cancelbtn==(maw))) {
+				
+				
+				if(!(cancelbtn==mainwin)) {
+					driver.switchTo().window(cancelbtn);
+					System.out.println(driver.getTitle());
+				}
+				driver.switchTo().window(cancelbtn);
+				System.out.println("This is I wanted to get"+ driver.getTitle());
+			}
+		}*/
+		
 		/*
 		 * custnotifi.click(); if (custnotifi.isSelected() == true) {
 		 * driver.manage().window().maximize();
@@ -150,11 +181,9 @@ public class CustomersTab extends TestBase {
 		 * } else { System.out.println("notificatoin not found"); }
 		 */
 		// orngcancelbutn.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.querySelector(\"button[class='button-text-orange button-small']\").click()");
-		String cancelreasonwin = getwindow.next();
-		driver.switchTo().window(cancelreasonwin);
-		System.out.println("this is canclwindow " + cancelreasonwin);
+
+		//driver.switchTo().window(cancelreasonwin);
+	//	System.out.println("this is canclwindow " + cancelreasonwin);
 		canclreason.sendKeys("aptest");
 		canclwithreasonbutn.click();
 		driver.switchTo().alert().accept();
