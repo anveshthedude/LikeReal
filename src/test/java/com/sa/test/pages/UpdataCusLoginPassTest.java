@@ -35,7 +35,7 @@ public class UpdataCusLoginPassTest extends TestBase {
 	@Test
 	public void updateuserlogin() throws Exception {
 		customertab = new CustomersTab();
-		boolean updatedone = customertab.updatepass("aptest", "Customer, Test", "test8");
+		boolean updatedone = customertab.updatepass("aptest", "Customer, Test", "test9");
 		Assert.assertEquals(true, updatedone);
 	}
 

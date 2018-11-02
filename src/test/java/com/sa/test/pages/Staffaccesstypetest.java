@@ -33,7 +33,7 @@ public class Staffaccesstypetest extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2,dependsOnMethods= {"VerifyStaffDaysUpdatetest"})
 	public void verifyifaccesstypeselected() throws IOException, InterruptedException {
 
 		boolean nine = stafftabpage.CheckifAccesstypeIsSelected();
@@ -41,7 +41,7 @@ public class Staffaccesstypetest extends TestBase {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void VerifyStaffDaysUpdatetest() throws IOException {
 		// stafftabpage = new StaffTabPage();
 		boolean result = stafftabpage.UpdateDaysOff();

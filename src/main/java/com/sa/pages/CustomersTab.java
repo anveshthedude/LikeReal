@@ -131,72 +131,45 @@ public class CustomersTab extends TestBase {
 		appthistory.click();
 		driver.switchTo().defaultContent();
 		utilities.framemid();
-		//String parent=driver.getWindowHandle();
+		// String parent=driver.getWindowHandle();
 		thirdapptinhistory.click();
 		Set<String> windows = driver.getWindowHandles();
-		System.out.println("first windows"+windows);
+
 		Iterator<String> getwindow = windows.iterator();
 		String mainwin = getwindow.next();
 		String maw = getwindow.next();
-		
+
 		driver.switchTo().window(maw);
 
 		clickoncancelappt.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.querySelector(\"button[class='button-text-orange button-small']\").click()");
-		
-		Set<String> windowsss= driver.getWindowHandles();
-		
-		Iterator<String> once = windowsss.iterator();
-		
-			String h1= once.next();
-			String h2=once.next();
-			String h3=once.next();
-			driver.switchTo().window(h3);
-			
-			System.out.println(driver.getTitle());
-		System.out.println("these are windows"+windowsss);
-		
-		
-		
-		/*for(String cancelbtn: windows) {
-			if(!(cancelbtn==(maw))) {
-				
-				
-				if(!(cancelbtn==mainwin)) {
-					driver.switchTo().window(cancelbtn);
-					System.out.println(driver.getTitle());
-				}
-				driver.switchTo().window(cancelbtn);
-				System.out.println("This is I wanted to get"+ driver.getTitle());
-			}
-		}*/
-		
-		/*
-		 * custnotifi.click(); if (custnotifi.isSelected() == true) {
-		 * driver.manage().window().maximize();
-		 * driver.findElement(By.xpath("//input[@name='send_cancel_cust']")).click();
-		 * //custnotifi.click();
-		 * 
-		 * } else { System.out.println("notificatoin not found"); }
-		 */
-		// orngcancelbutn.click();
 
-		//driver.switchTo().window(cancelreasonwin);
-	//	System.out.println("this is canclwindow " + cancelreasonwin);
+		Set<String> windowsss = driver.getWindowHandles();
+
+		Iterator<String> once = windowsss.iterator();
+
+		String h1 = once.next();
+		String h2 = once.next();
+		String h3 = once.next();
+		driver.switchTo().window(h3);
+
+		System.out.println("Cancellation reason window " + driver.getTitle());
+
 		canclreason.sendKeys("aptest");
 		canclwithreasonbutn.click();
-		driver.switchTo().alert().accept();
-		driver.switchTo().window(maw);
+		// driver.switchTo().alert().accept();
+		driver.switchTo().window(h2);
 		boolean cancelled = cancelsucessmess.isDisplayed();
 		if (cancelled == true) {
-			System.out.println("Cancelled" + cancelsucessmess);
-			driver.quit();
+			System.out.println("Appt Cancelled");
+			driver.close();
 		} else {
 			System.out.println("not cancelled");
+			driver.close();
 		}
 
-		driver.switchTo().window(mainwin);
+		driver.switchTo().window(h1);
 		return cancelled;
 	}
 
