@@ -13,7 +13,7 @@ import utilities.Utilities;
 public class TestBase {
 
 	public static WebDriver driver;
-	public static Properties read;
+	public static Properties read; //teset
 
 	public TestBase() throws IOException {
 

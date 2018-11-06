@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40986" started-at="2018-10-29T04:57:01Z" finished-at="2018-10-29T04:57:41Z">
+  <suite name="Default suite" duration-ms="41743" started-at="2018-11-05T05:43:46Z" finished-at="2018-11-05T05:44:28Z">
     <groups>
       <group name="loginpages">
         <method signature="Loginpagetest.aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="aplogotest" class="com.sa.test.pages.Loginpagetest"/>
         <method signature="Loginpagetest.verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="verify" class="com.sa.test.pages.Loginpagetest"/>
       </group> <!-- loginpages -->
     </groups>
-    <test name="Default test" duration-ms="40986" started-at="2018-10-29T04:57:01Z" finished-at="2018-10-29T04:57:41Z">
+    <test name="Default test" duration-ms="41743" started-at="2018-11-05T05:43:46Z" finished-at="2018-11-05T05:44:28Z">
       <class name="com.sa.test.pages.Loginpagetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="9195" started-at="2018-10-29T10:27:01Z" finished-at="2018-10-29T10:27:10Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="10892" started-at="2018-11-05T11:13:46Z" finished-at="2018-11-05T11:13:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="aplogotest" duration-ms="80" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:10Z">
+        <test-method status="PASS" signature="aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="aplogotest" duration-ms="79" started-at="2018-11-05T11:13:57Z" finished-at="2018-11-05T11:13:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aplogotest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="102" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:10Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="110" started-at="2018-11-05T11:13:57Z" finished-at="2018-11-05T11:13:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="7367" started-at="2018-10-29T10:27:10Z" finished-at="2018-10-29T10:27:17Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="setup" is-config="true" duration-ms="6444" started-at="2018-11-05T11:13:57Z" finished-at="2018-11-05T11:14:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="verify" duration-ms="24117" started-at="2018-10-29T10:27:17Z" finished-at="2018-10-29T10:27:41Z">
+        <test-method status="PASS" signature="verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="verify" duration-ms="24086" started-at="2018-11-05T11:14:03Z" finished-at="2018-11-05T11:14:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="104" started-at="2018-10-29T10:27:41Z" finished-at="2018-10-29T10:27:41Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@5c7fa833]" name="close" is-config="true" duration-ms="110" started-at="2018-11-05T11:14:28Z" finished-at="2018-11-05T11:14:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
