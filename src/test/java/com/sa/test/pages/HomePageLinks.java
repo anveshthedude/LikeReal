@@ -26,16 +26,16 @@ public class HomePageLinks extends TestBase {
 	public void links() throws Exception {
 
 		initizlization();
-		loginpage = new LoginPage();
+		/*loginpage = new LoginPage();
 		loginpage.ValidateloginPagetitle();
 		utilities = new Utilities();
-		utilities.framehead();
+		utilities.framehead();*/
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		links.size();
 		System.out.println(links.size());
 		for (int a = 0; a<links.size(); a++) {
 			WebElement li = links.get(a);
-			String the = li.getAttribute("id");
+			String the = li.getAttribute("href");
 			System.out.println("This is href ---->"+the);
 
 		}
