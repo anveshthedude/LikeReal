@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sa.test.pages.CancelApptFromApptHistory">
+      <class name="com.sa.test.pages.Staffaccesstypetest">
         <methods>
-          <include name="cancelapptfromappthistory"/>
+          <include name="verifyifaccesstypeselected"/>
           <include name="setup"/>
-          <include name="teardown"/>
+          <include name="VerifyStaffDaysUpdatetest"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- com.sa.test.pages.CancelApptFromApptHistory -->
+      </class> <!-- com.sa.test.pages.Staffaccesstypetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
