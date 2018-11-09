@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sa.test.pages.HomePageLinks">
+      <class name="forMaintanance.ScheduleMaintenance">
         <methods>
-          <include name="links"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.sa.test.pages.HomePageLinks -->
+      </class> <!-- forMaintanance.ScheduleMaintenance -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

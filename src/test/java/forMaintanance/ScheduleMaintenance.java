@@ -58,17 +58,15 @@ public class ScheduleMaintenance {
 			String siteadmin = getwindow.next();
 
 			driver.switchTo().window(siteadmin);
-
-			driver.switchTo().frame("header");
-			driver.manage().window().maximize();
 			Thread.sleep(3000);
+			driver.switchTo().frame("header");
+			//driver.manage().window().maximize();
+			Thread.sleep(2000);
 			boolean Repotabvisible = driver.findElement(By.xpath("//a[@id='fl-navtab-item-reports-id']")).isDisplayed();
-			if (Repotabvisible == true)
-
-			{
-				System.out.println("AP"+firstname + "  Test is Pass");
+			if (Repotabvisible == true)	{
+				System.out.println("AP" + firstname + "  Test is Pass");
 			} else {
-				System.out.println("AP"+firstname + "  Test is Fail");
+				System.out.println("AP" + firstname + "  Test is Fail");
 			}
 
 			driver.quit();
