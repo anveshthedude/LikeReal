@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="249223" started-at="2018-11-13T09:55:54Z" finished-at="2018-11-13T10:00:03Z">
+  <suite name="Default suite" duration-ms="493133" started-at="2018-11-13T16:40:41Z" finished-at="2018-11-13T16:48:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="249223" started-at="2018-11-13T09:55:54Z" finished-at="2018-11-13T10:00:03Z">
+    <test name="Default test" duration-ms="493133" started-at="2018-11-13T16:40:41Z" finished-at="2018-11-13T16:48:54Z">
       <class name="com.sa.test.pages.ZendeskPageLinks">
-        <test-method status="PASS" signature="links()[pri:0, instance:com.sa.test.pages.ZendeskPageLinks@735b5592]" name="links" duration-ms="249201" started-at="2018-11-13T15:25:54Z" finished-at="2018-11-13T15:30:03Z">
+        <test-method status="PASS" signature="links()[pri:0, instance:com.sa.test.pages.ZendeskPageLinks@7c16905e]" name="links" duration-ms="493107" started-at="2018-11-13T22:10:41Z" finished-at="2018-11-13T22:18:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- links -->

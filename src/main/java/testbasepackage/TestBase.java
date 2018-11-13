@@ -17,7 +17,7 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 
-		String file = "win";
+		String file = "air";
 
 		if (file.equals("air")) {
 			read = new Properties();
@@ -38,7 +38,7 @@ public class TestBase {
 
 		String laptop = read.getProperty("laptop");
 		
-		if (laptop.equalsIgnoreCase("win")) {
+		if (laptop.equalsIgnoreCase("mac")) {
 			System.setProperty("webdriver.chrome.driver","/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
 			driver = new ChromeDriver();
 
