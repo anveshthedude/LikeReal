@@ -1,0 +1,8 @@
+<suite name="AutoPractice">
+	<test name="AllCalssesTest">
+		<classes>
+			<class name="com.sa.test.pages.Loginpagetest" />
+			<class name="com.sa.test.pages.Staffaccesstypetest" />
+		</classes>
+	</test>
+</suite>
