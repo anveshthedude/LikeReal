@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sa.test.pages.ZendeskPageLinks">
+      <class name="justtests.IframeTest">
         <methods>
-          <include name="links"/>
+          <include name="iframe"/>
         </methods>
-      </class> <!-- com.sa.test.pages.ZendeskPageLinks -->
+      </class> <!-- justtests.IframeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

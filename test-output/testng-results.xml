@@ -1,67 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="AutoPractice" duration-ms="136299" started-at="2018-11-13T12:00:57Z" finished-at="2018-11-13T12:03:13Z">
+  <suite name="Default suite" duration-ms="19611" started-at="2018-11-15T10:08:36Z" finished-at="2018-11-15T10:08:56Z">
     <groups>
-      <group name="loginpages">
-        <method signature="Loginpagetest.verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="verify" class="com.sa.test.pages.Loginpagetest"/>
-        <method signature="Loginpagetest.aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="aplogotest" class="com.sa.test.pages.Loginpagetest"/>
-      </group> <!-- loginpages -->
     </groups>
-    <test name="AllCalssesTest" duration-ms="136299" started-at="2018-11-13T12:00:57Z" finished-at="2018-11-13T12:03:13Z">
-      <class name="com.sa.test.pages.Loginpagetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="setup" is-config="true" duration-ms="7304" started-at="2018-11-13T17:30:57Z" finished-at="2018-11-13T17:31:04Z">
+    <test name="Default test" duration-ms="19611" started-at="2018-11-15T10:08:36Z" finished-at="2018-11-15T10:08:56Z">
+      <class name="justtests.IframeTest">
+        <test-method status="PASS" signature="iframe()[pri:0, instance:justtests.IframeTest@735b5592]" name="iframe" duration-ms="19589" started-at="2018-11-15T15:38:36Z" finished-at="2018-11-15T15:38:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="aplogotest()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="aplogotest" duration-ms="193" started-at="2018-11-13T17:31:04Z" finished-at="2018-11-13T17:31:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aplogotest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="close" is-config="true" duration-ms="876" started-at="2018-11-13T17:31:04Z" finished-at="2018-11-13T17:31:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="setup" is-config="true" duration-ms="28174" started-at="2018-11-13T17:31:05Z" finished-at="2018-11-13T17:31:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="verify" duration-ms="20606" started-at="2018-11-13T17:31:33Z" finished-at="2018-11-13T17:31:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Loginpagetest@20e2cbe0]" name="close" is-config="true" duration-ms="726" started-at="2018-11-13T17:31:54Z" finished-at="2018-11-13T17:31:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.sa.test.pages.Loginpagetest -->
-      <class name="com.sa.test.pages.Staffaccesstypetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="setup" is-config="true" duration-ms="22122" started-at="2018-11-13T17:31:55Z" finished-at="2018-11-13T17:32:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="VerifyStaffDaysUpdatetest()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="VerifyStaffDaysUpdatetest" duration-ms="15330" started-at="2018-11-13T17:32:17Z" finished-at="2018-11-13T17:32:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyStaffDaysUpdatetest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="close" is-config="true" duration-ms="818" started-at="2018-11-13T17:32:32Z" finished-at="2018-11-13T17:32:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="setup" is-config="true" duration-ms="31352" started-at="2018-11-13T17:32:33Z" finished-at="2018-11-13T17:33:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyifaccesstypeselected()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="verifyifaccesstypeselected" duration-ms="8027" started-at="2018-11-13T17:33:04Z" depends-on-methods="com.sa.test.pages.Staffaccesstypetest.VerifyStaffDaysUpdatetest" finished-at="2018-11-13T17:33:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyifaccesstypeselected -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sa.test.pages.Staffaccesstypetest@6767c1fc]" name="close" is-config="true" duration-ms="740" started-at="2018-11-13T17:33:12Z" finished-at="2018-11-13T17:33:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.sa.test.pages.Staffaccesstypetest -->
-    </test> <!-- AllCalssesTest -->
-  </suite> <!-- AutoPractice -->
+        </test-method> <!-- iframe -->
+      </class> <!-- justtests.IframeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
