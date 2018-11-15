@@ -16,7 +16,7 @@ final public class Bootstrap{
 
 	}
 
-	public static void boot() {
+	public static void boot() {// teested and working
 
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");

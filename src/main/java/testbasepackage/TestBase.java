@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import utilities.Utilities;
 
@@ -35,7 +36,8 @@ public class TestBase {
 	}
 
 	public static void initizlization() {
-
+		
+		
 		String laptop = read.getProperty("laptop");
 		
 		if (laptop.equalsIgnoreCase("win")) {
@@ -43,6 +45,9 @@ public class TestBase {
 			driver = new ChromeDriver();
 
 		} else {
+			/*ChromeOptions options = new ChromeOptions();
+	        options.addArguments("headless");
+	        options.addArguments("window-size=1200x600");*/
 			System.setProperty("webdriver.chrome.driver",
 					"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
