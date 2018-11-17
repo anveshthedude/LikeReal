@@ -26,7 +26,7 @@ public class ZendeskPageLinks extends TestBase {
 	}
 
 	@Test
-	public void links() throws Exception {
+	public void links() throws Exception {  //to update
 
 		initizlization();
 		/*
