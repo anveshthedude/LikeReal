@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19611" started-at="2018-11-15T10:08:36Z" finished-at="2018-11-15T10:08:56Z">
+  <suite name="Default suite" duration-ms="34889" started-at="2018-11-19T13:08:38Z" finished-at="2018-11-19T13:09:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19611" started-at="2018-11-15T10:08:36Z" finished-at="2018-11-15T10:08:56Z">
+    <test name="Default test" duration-ms="34889" started-at="2018-11-19T13:08:38Z" finished-at="2018-11-19T13:09:13Z">
       <class name="justtests.IframeTest">
-        <test-method status="PASS" signature="iframe()[pri:0, instance:justtests.IframeTest@735b5592]" name="iframe" duration-ms="19589" started-at="2018-11-15T15:38:36Z" finished-at="2018-11-15T15:38:56Z">
+        <test-method status="PASS" signature="iFrame()[pri:0, instance:justtests.IframeTest@735b5592]" name="iFrame" duration-ms="34856" started-at="2018-11-19T18:38:38Z" finished-at="2018-11-19T18:39:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iframe -->
+        </test-method> <!-- iFrame -->
       </class> <!-- justtests.IframeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
