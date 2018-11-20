@@ -42,7 +42,7 @@ public class ExcelTest extends TestBase {
 	 * }
 	 */
 
-	@BeforeMethod
+	@BeforeMethod // over laptest
 	public void setup() {
 		initizlization();
 		driver.manage().window().maximize();
