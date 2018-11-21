@@ -1,29 +1,15 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="justtests.IframeTest">
+      <class name="com.sa.test.pages.CorrectServiceCostTest">
         <methods>
-          <include name="iframe"/>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="servicecosttest"/>
         </methods>
-      </class> <!-- justtests.IframeTest -->
+      </class> <!-- com.sa.test.pages.CorrectServiceCostTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.sa.test.pages.ZendeskPageLinks">
-        <methods>
-          <include name="links"/>
-        </methods>
-      </class> <!-- com.sa.test.pages.ZendeskPageLinks -->
-    </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
->>>>>>> branch 'master' of https://github.com/anveshthedude/LikeReal.git

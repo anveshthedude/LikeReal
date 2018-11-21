@@ -50,7 +50,8 @@ public class StringTest {
 			re = re + u.charAt(i);
 		}
 		System.out.println("reverse 2    " + re);
-
+		
+		
 	}
 
 }

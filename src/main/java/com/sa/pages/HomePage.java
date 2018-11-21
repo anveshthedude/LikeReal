@@ -1,6 +1,7 @@
 package com.sa.pages;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -56,6 +57,17 @@ public class HomePage extends TestBase {
 		utilities.framehead();
 		signout.click();
 
+	}
+
+	public static HashMap<Integer, String> calendar() {
+
+		HashMap<Integer, String> selectcal = new HashMap<Integer, String>();
+
+		selectcal.put(1, "1920");
+		selectcal.put(2, "1942");
+		selectcal.put(3, "617");
+		
+		return selectcal;
 	}
 
 }

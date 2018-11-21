@@ -18,7 +18,7 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 
-		String file = "air";
+		String file = "win";
 
 		if (file.equals("air")) {
 			read = new Properties();
