@@ -29,6 +29,9 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//a[@id='fl-header-toplinks-signout-id']")
 	public static WebElement signout;
 
+	@FindBy(xpath = "//a[contains(text(),'Packages')]")
+	public static WebElement packge;
+
 	public HomePage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
@@ -66,8 +69,21 @@ public class HomePage extends TestBase {
 		selectcal.put(1, "1920");
 		selectcal.put(2, "1942");
 		selectcal.put(3, "617");
-		
+
 		return selectcal;
 	}
+	
+	
+	public boolean pakage() throws IOException {
+		utilities = new Utilities();
+		utilities.framehead();
+		
+		
+		return packge.isDisplayed();
+		
+	}
+	
+	
+	
 
 }
