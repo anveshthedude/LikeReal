@@ -35,8 +35,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//a[@id='fl-navtab-item-packages-id']")
 	public static WebElement packgeid; 
 	
-	@FindBy(xpath = "//td[contains(text(),'Mobile-Responsive')]")
-	public static WebElement mobilerespon; 
+	
 
 	
 
@@ -90,16 +89,7 @@ public class HomePage extends TestBase {
 	}
 	
 	
-	public boolean mobile() throws IOException{
-		utilities = new Utilities();
-		utilities.framehead();
-		settings.click();
-		driver.switchTo().defaultContent();
-		utilities.framemid();
-		boolean mobvis = mobilerespon.isDisplayed();
-		return mobvis;
-		
-	}
+	
 	
 	
 	

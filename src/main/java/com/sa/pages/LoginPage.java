@@ -26,6 +26,18 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	@FindBy(xpath = "//img[@alt='AppointmentPlus Enterprise Scheduling Software']")
 	static WebElement logo;
+	
+	@FindBy(xpath = "//input[@name='login']")
+	static WebElement portaluser;
+	
+	@FindBy(xpath = "//input[@name='password']")
+	static WebElement portalpassword;
+		
+	@FindBy(xpath = "//input[@value='Login']")
+	static WebElement portaloginbtn;
+	
+	
+	
 
 	public LoginPage() throws IOException {
 
@@ -51,5 +63,25 @@ public class LoginPage extends TestBase { // incridible111112222222
 		return logo.isDisplayed();
 
 	}
+	
+	
+	public void portalLogin(){
+		
+		portaluser.sendKeys(read.getProperty("portuser"));
+		portalpassword.sendKeys(read.getProperty("portpass"));
+		portaloginbtn.click();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

@@ -32,6 +32,9 @@ public class SettingsPage extends TestBase {
 	@FindBy(xpath = "//input[@value='Edit']")
 	public static WebElement editsettings;
 
+	@FindBy(xpath = "//td[contains(text(),'Mobile-Responsive')]")
+	public static WebElement mobilerespon;
+
 	public SettingsPage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
@@ -54,10 +57,14 @@ public class SettingsPage extends TestBase {
 		return custpref46.isSelected();
 
 	}
-	
-	
-	
-	
-	
+
+	public boolean mobile() throws IOException {
+		driver.switchTo().defaultContent();
+		utilities = new Utilities();
+		utilities.framemid();
+		boolean mobvis = mobilerespon.isDisplayed();
+		return mobvis;
+
+	}
 
 }

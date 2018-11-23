@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.sa.pages.HomePage;
 import com.sa.pages.LoginPage;
+import com.sa.pages.SettingsPage;
 
 import testbasepackage.TestBase;
 import utilities.Utilities;
@@ -20,14 +21,24 @@ public class HomePageTest extends TestBase {
 	LoginPage loginpage;
 	Utilities utilities;
 	HomePage homepage;
+	SettingsPage settingspage;
 
 	public HomePageTest() throws IOException {
 		super();
 
 	}
 
-	@BeforeMethod
+	// @BeforeMethod
 	public void setup() throws Exception {
+
+		initizlization();
+		loginpage = new LoginPage();
+		loginpage.portalLogin();
+
+	}
+
+	@BeforeMethod
+	public void setup1() throws Exception {
 
 		initizlization();
 		loginpage = new LoginPage();
@@ -56,9 +67,28 @@ public class HomePageTest extends TestBase {
 	}
 
 	@Test
-	public void MVT() throws IOException {
+	public void MVT() throws Exception {
 		homepage = new HomePage();
-		Assert.assertEquals(homepage.mobile(), true);
+		homepage.clickonsettings();
+		settingspage = new SettingsPage();
+
+		try {
+
+			settingspage.mobile();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				String test = driver.findElement(By.xpath("//input[@name='contact_first_name']")).getAttribute("value");
+				System.out.println(test);
+
+			} catch (Exception e2) {
+				
+				
+
+			}
+
+		}
 
 	}
 

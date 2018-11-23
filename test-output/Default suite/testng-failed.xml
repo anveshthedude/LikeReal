@@ -7,7 +7,7 @@
         <methods>
           <include name="tierdown"/>
           <include name="MVT"/>
-          <include name="setup"/>
+          <include name="setup1"/>
         </methods>
       </class> <!-- com.sa.test.pages.HomePageTest -->
     </classes>

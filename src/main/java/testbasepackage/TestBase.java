@@ -14,7 +14,7 @@ import utilities.Utilities;
 public class TestBase {
 
 	public static WebDriver driver;
-	public static Properties read; //teset
+	public static Properties read; // teset
 
 	public TestBase() throws IOException {
 
@@ -28,32 +28,35 @@ public class TestBase {
 		} else {
 			read = new Properties();
 
-			FileInputStream pi = new FileInputStream("C:\\Users\\anvesh.durgam\\git\\LikeRealP\\src\\main\\java\\com\\properties\\Properties");
-			read.load(pi);							
+			FileInputStream pi = new FileInputStream(
+					"C:\\Users\\anvesh.durgam\\git\\LikeRealP\\src\\main\\java\\com\\properties\\Properties");
+			read.load(pi);
 
 		}
 
 	}
 
 	public static void initizlization() {
-		
-		
+
 		String laptop = read.getProperty("laptop");
-		
+
 		if (laptop.equalsIgnoreCase("mac")) {
-			System.setProperty("webdriver.chrome.driver","/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
+			System.setProperty("webdriver.chrome.driver",
+					"/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
 			driver = new ChromeDriver();
 
 		} else {
-			/*ChromeOptions options = new ChromeOptions();
-	        options.addArguments("headless");
-	        options.addArguments("window-size=1200x600");*/
+			/*
+			 * ChromeOptions options = new ChromeOptions();
+			 * options.addArguments("headless");
+			 * options.addArguments("window-size=1200x600");
+			 */
 			System.setProperty("webdriver.chrome.driver",
 					"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 
-		//driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
