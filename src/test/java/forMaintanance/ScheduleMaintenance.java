@@ -49,7 +49,7 @@ public class ScheduleMaintenance {
 			Set<String> windows = driver.getWindowHandles();
 
 			Iterator<String> getwindow = windows.iterator();
-			String portal = getwindow.next();
+			//String portal = getwindow.next();
 
 			String siteadmin = getwindow.next();
 

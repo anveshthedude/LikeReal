@@ -44,14 +44,21 @@ public class HomePageTest extends TestBase {
 		Thread.sleep(3000);
 
 	}
-	
-	
-	@Test
+
+	// @Test
 	public void pakg() throws IOException {
 		homepage = new HomePage();
+
 		boolean Pkgvisible = homepage.pakage();
-		System.out.println("package is visible");
-		Assert.assertEquals(Pkgvisible, true);
+		// System.out.println("package is visible");
+		// Assert.assertEquals(Pkgvisible, true);
+
+	}
+
+	@Test
+	public void MVT() throws IOException {
+		homepage = new HomePage();
+		Assert.assertEquals(homepage.mobile(), true);
 
 	}
 

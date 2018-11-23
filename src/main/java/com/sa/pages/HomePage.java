@@ -31,6 +31,14 @@ public class HomePage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Packages')]")
 	public static WebElement packge;
+	
+	@FindBy(xpath = "//a[@id='fl-navtab-item-packages-id']")
+	public static WebElement packgeid; 
+	
+	@FindBy(xpath = "//td[contains(text(),'Mobile-Responsive')]")
+	public static WebElement mobilerespon; 
+
+	
 
 	public HomePage() throws IOException {
 		PageFactory.initElements(driver, this);
@@ -76,12 +84,24 @@ public class HomePage extends TestBase {
 	
 	public boolean pakage() throws IOException {
 		utilities = new Utilities();
-		utilities.framehead();
-		
-		
+		utilities.framehead();		
 		return packge.isDisplayed();
 		
 	}
+	
+	
+	public boolean mobile() throws IOException{
+		utilities = new Utilities();
+		utilities.framehead();
+		settings.click();
+		driver.switchTo().defaultContent();
+		utilities.framemid();
+		boolean mobvis = mobilerespon.isDisplayed();
+		return mobvis;
+		
+	}
+	
+	
 	
 	
 	

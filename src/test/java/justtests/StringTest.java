@@ -22,7 +22,7 @@ public class StringTest {
 		// String lesss = new String();
 		// String lesss = "";
 
-		Set<Character> sor = new LinkedHashSet<>();
+		Set<Character> sor = new LinkedHashSet<Character>();
 		StringBuffer and = new StringBuffer();
 
 		for (int i = 0; i < ab.length(); i++) {
