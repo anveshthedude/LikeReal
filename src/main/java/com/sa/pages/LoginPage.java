@@ -26,18 +26,24 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	@FindBy(xpath = "//img[@alt='AppointmentPlus Enterprise Scheduling Software']")
 	static WebElement logo;
-	
+
 	@FindBy(xpath = "//input[@name='login']")
 	static WebElement portaluser;
-	
+
 	@FindBy(xpath = "//input[@name='password']")
 	static WebElement portalpassword;
-		
+
 	@FindBy(xpath = "//input[@value='Login']")
 	static WebElement portaloginbtn;
-	
-	
-	
+
+	@FindBy(xpath = "//input[@id='search']")
+	static WebElement clicksearchacct;
+
+	@FindBy(xpath = "//input[@id='account_number']")
+	static WebElement putaccnum;
+
+	@FindBy(xpath = "//input[@name='account_login']")
+	static WebElement loginasHQ;
 
 	public LoginPage() throws IOException {
 
@@ -47,10 +53,9 @@ public class LoginPage extends TestBase { // incridible111112222222
 
 	// Test methods
 	public HomePage ValidateloginPagetitle() throws Exception {
-		
-		
-		//System.out.println("name is    " + read.getProperty("username"));
-		//username.sendKeys("justlikethat");
+
+		// System.out.println("name is " + read.getProperty("username"));
+		// username.sendKeys("justlikethat");
 		username.sendKeys(read.getProperty("username"));
 		password.sendKeys(read.getProperty("password"));
 		loginbtn.click();
@@ -63,25 +68,13 @@ public class LoginPage extends TestBase { // incridible111112222222
 		return logo.isDisplayed();
 
 	}
-	
-	
-	public void portalLogin(){
-		
+
+	public void portalLogin() {
+
 		portaluser.sendKeys(read.getProperty("portuser"));
 		portalpassword.sendKeys(read.getProperty("portpass"));
 		portaloginbtn.click();
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

@@ -1,7 +1,12 @@
 package com.sa.test.pages;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -18,6 +23,7 @@ import utilities.Utilities;
 
 public class HomePageTest extends TestBase {
 
+	FileInputStream files;
 	LoginPage loginpage;
 	Utilities utilities;
 	HomePage homepage;
@@ -28,7 +34,7 @@ public class HomePageTest extends TestBase {
 
 	}
 
-	// @BeforeMethod
+	@BeforeMethod
 	public void setup() throws Exception {
 
 		initizlization();
@@ -37,7 +43,7 @@ public class HomePageTest extends TestBase {
 
 	}
 
-	@BeforeMethod
+	// @BeforeMethod
 	public void setup1() throws Exception {
 
 		initizlization();
@@ -62,32 +68,53 @@ public class HomePageTest extends TestBase {
 
 		boolean Pkgvisible = homepage.pakage();
 		// System.out.println("package is visible");
-		// Assert.assertEquals(Pkgvisible, true);
+		Assert.assertEquals(Pkgvisible, true);
 
 	}
 
 	@Test
 	public void MVT() throws Exception {
-		homepage = new HomePage();
-		homepage.clickonsettings();
-		settingspage = new SettingsPage();
+		files = new FileInputStream("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+		XSSFWorkbook book = new XSSFWorkbook(files);
+		System.out.println("this is sheet" + book.getSheet("spark"));
+		XSSFSheet sheet = book.getSheet("spark");
+		sheet.getLastRowNum();
 
-		try {
+		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 
-			settingspage.mobile();
+			String accountnumber = sheet.getRow(i).getCell(0).getStringCellValue();
 
-		} catch (Exception e) {
-			e.printStackTrace();
+			driver.findElement(By.xpath("//input[@id='account_number']")).sendKeys(accountnumber);
+			driver.findElement(By.xpath("//input[@id='search']")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//input[@name='account_login']")).click();
+			
+
+			Set<String> windows = driver.getWindowHandles();
+			Iterator<String> win = windows.iterator();
+			String portal = win.next();
+			String siteadmin = win.next();
+			driver.switchTo().window(siteadmin);
+			homepage = new HomePage();
+			homepage.clickonsettings();
+			settingspage = new SettingsPage();
+
 			try {
-				String test = driver.findElement(By.xpath("//input[@name='contact_first_name']")).getAttribute("value");
-				System.out.println(test);
 
-			} catch (Exception e2) {
+				settingspage.mobile();
 				
-				
+			} catch (Exception e) {
+				e.printStackTrace();
+				try {
+					String test = driver.findElement(By.xpath("//input[@name='contact_first_name']"))
+							.getAttribute("value");
+					System.out.println(test);
+
+				} catch (Exception e2) {
+
+				}
 
 			}
-
 		}
 
 	}
