@@ -1,10 +1,15 @@
 package com.sa.test.pages;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -28,6 +33,11 @@ public class HomePageTest extends TestBase {
 	Utilities utilities;
 	HomePage homepage;
 	SettingsPage settingspage;
+	HomePageTest homepagetest;
+	XSSFSheet sheet;
+	XSSFWorkbook book;
+	boolean yes;
+	boolean text;
 
 	public HomePageTest() throws IOException {
 		super();
@@ -72,28 +82,30 @@ public class HomePageTest extends TestBase {
 
 	}
 
-	/*public ArrayList<String> accoutnums() throws IOException {
-		ArrayList<String> accounts = new ArrayList<String>();
+	public Set<Object> accoutnums() throws IOException {
+		// ArrayList<String> accounts = new ArrayList<String>();
+		Set<Object> accounts = new HashSet<Object>();
 		files = new FileInputStream("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
-		XSSFWorkbook book = new XSSFWorkbook(files);
+		book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("spark"));
-		XSSFSheet sheet = book.getSheet("spark");
+		sheet = book.getSheet("spark");
 		sheet.getLastRowNum();
 
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 
-			String acct = sheet.getRow(i).getCell(0).getRawValue();
+			String acct = sheet.getRow(i).getCell(0).getStringCellValue();
+			String[] data = { acct };
 
-			accounts.add(acct);
+			accounts.add(data);
 		}
 		return accounts;
-	}*/
+	}
 
 	@DataProvider
 	public Iterator<Object> acountss() throws IOException {
 
-		SparkAccounts homepage = new SparkAccounts();
-		Set<Object> acc = homepage.accoutnums();
+		homepagetest = new HomePageTest();
+		Set<Object> acc = homepagetest.accoutnums();
 		return acc.iterator();
 
 	}
@@ -102,10 +114,13 @@ public class HomePageTest extends TestBase {
 	public void MVT(String acct) throws Exception {
 
 		driver.findElement(By.xpath("//input[@id='account_number']")).sendKeys(acct);
+
 		driver.findElement(By.xpath("//input[@id='search']")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//input[@name='account_login']")).click();
-
+		driver.findElement(By
+				.xpath("/html/body/table[5]/tbody/tr/td/table/tbody/tr[4]/td/table[2]/tbody/tr[2]/td[1]/form/input[5]"))
+				.click();
+		Thread.sleep(3000);
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> win = windows.iterator();
 		String portal = win.next();
@@ -115,21 +130,49 @@ public class HomePageTest extends TestBase {
 		homepage.clickonsettings();
 		settingspage = new SettingsPage();
 
-		try {
+		yes = settingspage.mobile();
+		if (yes == true) {
+			System.out.println("Mobile responsive is visible for " + acct + yes);
+			FileInputStream files = new FileInputStream(
+					"/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+			book = new XSSFWorkbook(files);
+			sheet = book.getSheet("spark");
+			sheet.getRow(0).createCell(1).setCellValue("Mobile responsive is visible for " + acct + yes);
+			FileOutputStream fileout = new FileOutputStream(
+					new File("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx"));
+			book.write(fileout);
+			fileout.close();
 
-			settingspage.mobile();
-
-		} catch (Exception e) {
-			e.printStackTrace();
+		} else {
 			try {
-				String test = driver.findElement(By.xpath("//input[@name='contact_first_name']")).getAttribute("value");
-				System.out.println(test);
+				
+				boolean packg = homepage.pakage();
+				if (packg == true) {
+					System.out.println("Packages is enabled in this account    " + acct + packg);
+					
+					text = homepage.textreminder();
+					System.out.println("Text Reminder is Enabled" + acct + text);
 
+				} else
+					System.out.println("Package is not Enabled in this account " + acct);
+				text = homepage.textreminder();
+				System.out.println("Text Reminder is Enabled" + acct + text);
 			} catch (Exception e2) {
+				e2.printStackTrace();
+				System.out.println("Text Reminder is NOT enabled");
+				FileInputStream files = new FileInputStream(
+						"/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+				book = new XSSFWorkbook(files);
+				sheet = book.getSheet("spark");
+				sheet.getRow(0).createCell(1).setCellValue("Mobile responsive is visible for " + acct + text);
+				FileOutputStream fileout = new FileOutputStream(
+						new File("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx"));
+				book.write(fileout);
+				fileout.close();
 
-			}
-
+			} 
 		}
+
 	}
 
 	@AfterMethod

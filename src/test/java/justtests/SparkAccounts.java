@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class SparkAccounts {
 	FileInputStream files;
 
-	public Set<Object> accoutnums() throws IOException {
+	public Set<Object> accoutnumss() throws IOException {
 		Set<Object> accounts = new HashSet<Object>();
 
 		// ArrayList<String> accounts = new ArrayList<String>();

@@ -2,6 +2,7 @@ package com.sa.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,7 +63,8 @@ public class SettingsPage extends TestBase {
 		driver.switchTo().defaultContent();
 		utilities = new Utilities();
 		utilities.framemid();
-		boolean mobvis = mobilerespon.isDisplayed();
+		boolean mobvis = driver.getPageSource().contains("Mobile-Responsive");
+		// mobilerespon.isDisplayed();
 		return mobvis;
 
 	}

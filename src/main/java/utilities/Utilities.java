@@ -11,8 +11,8 @@ public class Utilities extends TestBase {
 
 	}
 
-	public static long Pageloadtime = 60;
-	public static long Implicitwait = 60;
+	public static long Pageloadtime = 80;
+	public static long Implicitwait = 80;
 
 	public void framehead() {
 

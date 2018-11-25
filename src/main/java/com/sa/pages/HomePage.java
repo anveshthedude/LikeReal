@@ -13,6 +13,7 @@ import utilities.Utilities;
 
 public class HomePage extends TestBase {
 	Utilities utilities;
+	HomePage homepage;
 
 	@FindBy(xpath = "//a[@id='fl-toplinks-customerview-id']")
 	public static WebElement hoveroncustomerview;
@@ -31,13 +32,15 @@ public class HomePage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Packages')]")
 	public static WebElement packge;
-	
-	@FindBy(xpath = "//a[@id='fl-navtab-item-packages-id']")
-	public static WebElement packgeid; 
-	
-	
 
-	
+	@FindBy(xpath = "//a[@id='fl-navtab-item-packages-id']")
+	public static WebElement packgeid;
+
+	@FindBy(xpath = "//a[@id='fl-sidenav-plugin-Text Message Reminders-id']")
+	public static WebElement textremind;
+
+	@FindBy(xpath = "//a[@id='fl-toplinks-marketplace-id']")
+	public static WebElement marketplace;
 
 	public HomePage() throws IOException {
 		PageFactory.initElements(driver, this);
@@ -79,21 +82,20 @@ public class HomePage extends TestBase {
 
 		return selectcal;
 	}
-	
-	
+
 	public boolean pakage() throws IOException {
 		utilities = new Utilities();
-		utilities.framehead();		
-		return packge.isDisplayed();
-		
+		utilities.framehead();
+		return driver.getPageSource().contains("Packages");
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public boolean textreminder() {
+		marketplace.click();
+		driver.switchTo().defaultContent();
+		utilities.frameside();
+		return textremind.isDisplayed();
+
+	}
 
 }
