@@ -18,7 +18,7 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 
-		String file = "air";
+		String file = "win";
 
 		if (file.equals("air")) {
 			read = new Properties();
@@ -29,7 +29,7 @@ public class TestBase {
 			read = new Properties();
 
 			FileInputStream pi = new FileInputStream(
-					"C:\\Users\\anvesh.durgam\\git\\LikeRealP\\src\\main\\java\\com\\properties\\Properties");
+					"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\properties\\Properties");
 			read.load(pi);
 
 		}
@@ -62,6 +62,7 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
 		driver.get(read.getProperty("portalurl"));
+		driver.manage().deleteAllCookies();
 
 	}
 

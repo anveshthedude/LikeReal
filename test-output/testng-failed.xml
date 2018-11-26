@@ -6,7 +6,7 @@
       <class name="com.sa.test.pages.HomePageTest">
         <methods>
           <include name="tierdown"/>
-          <include name="MVT"/>
+          <include name="MVT" invocation-numbers="1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.sa.test.pages.HomePageTest -->

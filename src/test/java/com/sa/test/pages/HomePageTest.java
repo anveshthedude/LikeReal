@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -22,7 +23,6 @@ import com.sa.pages.HomePage;
 import com.sa.pages.LoginPage;
 import com.sa.pages.SettingsPage;
 
-import justtests.SparkAccounts;
 import testbasepackage.TestBase;
 import utilities.Utilities;
 
@@ -84,8 +84,8 @@ public class HomePageTest extends TestBase {
 
 	public Set<Object> accoutnums() throws IOException {
 		// ArrayList<String> accounts = new ArrayList<String>();
-		Set<Object> accounts = new HashSet<Object>();
-		files = new FileInputStream("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+		Set<Object> accounts = new LinkedHashSet<Object>();
+		files = new FileInputStream("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
 		book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("spark"));
 		sheet = book.getSheet("spark");
@@ -131,46 +131,46 @@ public class HomePageTest extends TestBase {
 		settingspage = new SettingsPage();
 
 		yes = settingspage.mobile();
-		if (yes == true) {
+		if (yes==true) {
 			System.out.println("Mobile responsive is visible for " + acct + yes);
 			FileInputStream files = new FileInputStream(
-					"/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+					"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
 			book = new XSSFWorkbook(files);
 			sheet = book.getSheet("spark");
-			sheet.getRow(0).createCell(1).setCellValue("Mobile responsive is visible for " + acct + yes);
+			sheet.getRow(1).createCell(1).setCellValue("Mobile responsive is visible for " + acct + yes);
 			FileOutputStream fileout = new FileOutputStream(
-					new File("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx"));
+					new File("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx"));
 			book.write(fileout);
 			fileout.close();
 
 		} else {
 			try {
-				
+
 				boolean packg = homepage.pakage();
 				if (packg == true) {
-					System.out.println("Packages is enabled in this account    " + acct + packg);
-					
+					System.out.println("Packages is enabled in this account, Spark May be not alowed    " + acct + packg);
+
 					text = homepage.textreminder();
 					System.out.println("Text Reminder is Enabled" + acct + text);
 
 				} else
-					System.out.println("Package is not Enabled in this account " + acct);
+					System.out.println("Package is NOT Enabled in this account  " + acct);
 				text = homepage.textreminder();
 				System.out.println("Text Reminder is Enabled" + acct + text);
 			} catch (Exception e2) {
 				e2.printStackTrace();
 				System.out.println("Text Reminder is NOT enabled");
 				FileInputStream files = new FileInputStream(
-						"/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx");
+						"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
 				book = new XSSFWorkbook(files);
 				sheet = book.getSheet("spark");
-				sheet.getRow(0).createCell(1).setCellValue("Mobile responsive is visible for " + acct + text);
+				sheet.getRow(2).createCell(1).setCellValue("Packages and Text_Reminder is not Enabled     " + acct);
 				FileOutputStream fileout = new FileOutputStream(
-						new File("/Users/anveshdurgam/git/LikeReal/src/main/java/com/testdata/testdatamac.xlsx"));
+						new File("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx"));
 				book.write(fileout);
 				fileout.close();
 
-			} 
+			}
 		}
 
 	}

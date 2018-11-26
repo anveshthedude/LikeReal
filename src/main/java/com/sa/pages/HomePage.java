@@ -84,6 +84,7 @@ public class HomePage extends TestBase {
 	}
 
 	public boolean pakage() throws IOException {
+		driver.switchTo().defaultContent();
 		utilities = new Utilities();
 		utilities.framehead();
 		return driver.getPageSource().contains("Packages");
