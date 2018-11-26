@@ -159,7 +159,7 @@ public class HomePageTest extends TestBase {
 				System.out.println("Text Reminder is Enabled" + acct + text);
 			} catch (Exception e2) {
 				e2.printStackTrace();
-				System.out.println("Text Reminder is NOT enabled");
+				System.out.println("Text Reminder is NOT enabled  "+acct);
 				FileInputStream files = new FileInputStream(
 						"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
 				book = new XSSFWorkbook(files);
