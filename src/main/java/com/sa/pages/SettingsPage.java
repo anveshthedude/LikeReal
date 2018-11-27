@@ -36,6 +36,9 @@ public class SettingsPage extends TestBase {
 	@FindBy(xpath = "//td[contains(text(),'Mobile-Responsive')]")
 	public static WebElement mobilerespon;
 
+	@FindBy(xpath = "//a[@id='fl-sidenav-plugin-Connect-Up for Google Calendar-id']")
+	public static WebElement googlecalen;
+
 	public SettingsPage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
@@ -67,6 +70,15 @@ public class SettingsPage extends TestBase {
 		// mobilerespon.isDisplayed();
 		return mobvis;
 
+	}
+
+	public boolean googleca() throws IOException {
+		driver.switchTo().defaultContent();
+		utilities = new Utilities();
+		utilities.frameside();
+		return driver.getPageSource().contains("Connect-Up for Google Calendar");
+
+		// return googlecalen.isDisplayed();
 	}
 
 }

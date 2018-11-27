@@ -85,13 +85,14 @@ public class HomePageTest extends TestBase {
 	public Set<Object> accoutnums() throws IOException {
 		// ArrayList<String> accounts = new ArrayList<String>();
 		Set<Object> accounts = new LinkedHashSet<Object>();
-		files = new FileInputStream("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
+		files = new FileInputStream(
+				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
 		book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("spark"));
 		sheet = book.getSheet("spark");
 		sheet.getLastRowNum();
 
-		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+		for (int i = 10; i <= sheet.getLastRowNum(); i++) {
 
 			String acct = sheet.getRow(i).getCell(0).getStringCellValue();
 			String[] data = { acct };
@@ -131,7 +132,7 @@ public class HomePageTest extends TestBase {
 		settingspage = new SettingsPage();
 
 		yes = settingspage.mobile();
-		if (yes==true) {
+		if (yes == true) {
 			System.out.println("Mobile responsive is visible for " + acct + yes);
 			FileInputStream files = new FileInputStream(
 					"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
@@ -148,27 +149,29 @@ public class HomePageTest extends TestBase {
 
 				boolean packg = homepage.pakage();
 				if (packg == true) {
-					System.out.println("Packages is enabled in this account, Spark May be not alowed    " + acct + packg);
+					System.out.println(
+							"Packages is enabled in this account, Spark May be not alowed    " + acct + " " + packg);
 
 					text = homepage.textreminder();
-					System.out.println("Text Reminder is Enabled" + acct + text);
+					System.out.println("Text Reminder is Enabled" + acct + " " + text);
 
 				} else
 					System.out.println("Package is NOT Enabled in this account  " + acct);
+
 				text = homepage.textreminder();
 				System.out.println("Text Reminder is Enabled" + acct + text);
 			} catch (Exception e2) {
-				e2.printStackTrace();
-				System.out.println("Text Reminder is NOT enabled  "+acct);
-				FileInputStream files = new FileInputStream(
-						"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
-				book = new XSSFWorkbook(files);
-				sheet = book.getSheet("spark");
-				sheet.getRow(2).createCell(1).setCellValue("Packages and Text_Reminder is not Enabled     " + acct);
-				FileOutputStream fileout = new FileOutputStream(
-						new File("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx"));
-				book.write(fileout);
-				fileout.close();
+				// e2.printStackTrace();
+				System.out.println("Text Reminder is NOT enabled  " + acct);
+				try {
+					boolean googcal = settingspage.googleca();
+					System.out.println("Google Calendar is Enabled  " + googcal + " " + acct);
+
+				} catch (Exception e) {
+
+					System.out.println("Google Calendar is NOT Enabled   " + acct);
+
+				}
 
 			}
 		}

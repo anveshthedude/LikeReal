@@ -1,56 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="605" started-at="2018-11-27T05:14:47Z" finished-at="2018-11-27T05:14:48Z">
+  <suite name="Default suite" duration-ms="122016" started-at="2018-11-27T11:43:22Z" finished-at="2018-11-27T11:45:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="605" started-at="2018-11-27T05:14:47Z" finished-at="2018-11-27T05:14:48Z">
+    <test name="Default test" duration-ms="122016" started-at="2018-11-27T11:43:22Z" finished-at="2018-11-27T11:45:24Z">
       <class name="com.sa.test.pages.HomePageTest">
-        <test-method status="FAIL" signature="MVT(java.lang.String)[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="MVT" duration-ms="0" started-at="2018-11-27T10:44:48Z" data-provider="acountss" finished-at="2018-11-27T10:44:48Z">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.NullPointerException]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.sa.test.pages.HomePageTest.accoutnums(HomePageTest.java:96)
-	at com.sa.test.pages.HomePageTest.acountss(HomePageTest.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:135)
-	... 20 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="setup" is-config="true" duration-ms="10851" started-at="2018-11-27T17:13:23Z" finished-at="2018-11-27T17:13:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="MVT(java.lang.String)[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="MVT" duration-ms="109783" started-at="2018-11-27T17:13:34Z" data-provider="acountss" finished-at="2018-11-27T17:15:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AP352-497]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MVT -->
+        <test-method status="PASS" signature="tierdown()[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="tierdown" is-config="true" duration-ms="737" started-at="2018-11-27T17:15:24Z" finished-at="2018-11-27T17:15:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tierdown -->
       </class> <!-- com.sa.test.pages.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
