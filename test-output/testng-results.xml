@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="628" started-at="2018-11-26T16:21:14Z" finished-at="2018-11-26T16:21:14Z">
+  <suite name="Default suite" duration-ms="605" started-at="2018-11-27T05:14:47Z" finished-at="2018-11-27T05:14:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="628" started-at="2018-11-26T16:21:14Z" finished-at="2018-11-26T16:21:14Z">
+    <test name="Default test" duration-ms="605" started-at="2018-11-27T05:14:47Z" finished-at="2018-11-27T05:14:48Z">
       <class name="com.sa.test.pages.HomePageTest">
-        <test-method status="FAIL" signature="MVT(java.lang.String)[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="MVT" duration-ms="0" started-at="2018-11-26T21:51:14Z" data-provider="acountss" finished-at="2018-11-26T21:51:14Z">
+        <test-method status="FAIL" signature="MVT(java.lang.String)[pri:0, instance:com.sa.test.pages.HomePageTest@51565ec2]" name="MVT" duration-ms="0" started-at="2018-11-27T10:44:48Z" data-provider="acountss" finished-at="2018-11-27T10:44:48Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
