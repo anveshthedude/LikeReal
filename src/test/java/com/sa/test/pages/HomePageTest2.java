@@ -42,7 +42,7 @@ public class HomePageTest2 extends TestBase {
 
 	public static void excelfileread() throws IOException {
 		files = new FileInputStream(
-				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx");
+				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\spark2.xlsx");
 		book = new XSSFWorkbook(files);
 		System.out.println("this is sheet" + book.getSheet("spark"));
 		sheet = book.getSheet("spark");
@@ -51,7 +51,7 @@ public class HomePageTest2 extends TestBase {
 
 	public static void excelfilewrite() throws IOException {
 		fileout = new FileOutputStream(
-				new File("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx"));
+				new File("C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\spark2.xlsx"));
 		book.write(fileout);
 		fileout.close();
 
@@ -97,7 +97,7 @@ public class HomePageTest2 extends TestBase {
 				 * "C:\\Users\\anvesh.durgam\\git\\LikeReal\\src\\main\\java\\com\\testdata\\Test.xlsx"
 				 * ); book = new XSSFWorkbook(files); sheet = book.getSheet("spark");
 				 */
-				sheet.getRow(2).createCell(i).setCellValue("Mobile responsive is visible for " + acct + yes);
+				sheet.getRow(i).createCell(2).setCellValue("Mobile responsive is visible for " + acct + yes);
 				excelfilewrite();
 
 			} else {
@@ -110,7 +110,7 @@ public class HomePageTest2 extends TestBase {
 
 						text = homepage.textreminder();
 						System.out.println("Text Reminder is Enabled" + acct + " " + text);
-						sheet.getRow(2).createCell(i).setCellValue("Text Reminder is Enabled  " + acct + text);
+						sheet.getRow(i).createCell(2).setCellValue("Text Reminder is Enabled  " + acct + text);
 						excelfilewrite();
 						driver.quit();
 
@@ -119,23 +119,23 @@ public class HomePageTest2 extends TestBase {
 
 					text = homepage.textreminder();
 					System.out.println("Text Reminder is Enabled" + acct + text);
-					sheet.getRow(2).createCell(i).setCellValue("Text Reminder is Enabled  " + acct + " " + text);
+					sheet.getRow(i).createCell(2).setCellValue("Text Reminder is Enabled  " + acct + " " + text);
 					excelfilewrite();
 					driver.quit();
 				} catch (Exception e2) {
 					// e2.printStackTrace();
 					System.out.println("Text Reminder is NOT enabled  " + acct);
 					try {
-						boolean googcal = settingspage.googleca();
+						googcal = settingspage.googleca();
 						System.out.println("Google Calendar is Enabled  " + googcal + " " + acct);
-						sheet.getRow(2).createCell(i)
+						sheet.getRow(i).createCell(2)
 								.setCellValue("Google Calendar is Enabled  " + acct + " " + googcal);
 						excelfilewrite();
 						driver.quit();
 					} catch (Exception e) {
 
 						System.out.println("Google Calendar is NOT Enabled   " + acct);
-						sheet.getRow(2).createCell(i)
+						sheet.getRow(i).createCell(2)
 								.setCellValue("Google Calendar is NOT Enabled  " + acct + " " + googcal);
 						excelfilewrite();
 						driver.quit();
