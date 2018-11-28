@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sa.test.pages.HomePageTest">
+      <class name="com.sa.test.pages.HomePageTest2">
         <methods>
-          <include name="tierdown"/>
-          <include name="MVT" invocation-numbers="6"/>
-          <include name="setup"/>
+          <include name="sparktest"/>
         </methods>
-      </class> <!-- com.sa.test.pages.HomePageTest -->
+      </class> <!-- com.sa.test.pages.HomePageTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
