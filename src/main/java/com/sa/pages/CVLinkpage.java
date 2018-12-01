@@ -15,6 +15,9 @@ import utilities.Utilities;
 
 public class CVLinkpage extends TestBase {
 	Utilities utilities;
+	
+	
+	
 
 	@FindBy(xpath = "//a[@class='fl-preview-link']")
 	public static WebElement previewlinkurl;
