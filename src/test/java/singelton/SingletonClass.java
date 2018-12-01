@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SingletonClass {
+public class SingletonClass{
 
 	public static WebDriver driver = null;
 	public static SingletonClass clas = null;
@@ -15,7 +15,7 @@ public class SingletonClass {
 	@FindBy(xpath = "//input[@id='account_number']")
 	static WebElement putaccnum;
 	
-	private SingletonClass() {
+	public  SingletonClass() {
 		PageFactory.initElements(driver, this);
 	}
 
