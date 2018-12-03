@@ -33,7 +33,9 @@ public class StringTest {
 			}
 		}
 
-		System.out.println("result     " + and.toString());
+		System.out.println("result   nel  " + and.toString());
+		String up =and.toString();
+		System.out.println("all "+ up);
 
 		char ch = ab.charAt(4);
 		System.out.println("second " + ch);
