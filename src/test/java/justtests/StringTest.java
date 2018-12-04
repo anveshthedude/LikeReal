@@ -6,7 +6,7 @@ import java.util.Set;
 public class StringTest {
 
 	public static void main(String[] args) {
-
+		stre();
 		String a = "12341";
 
 		int b = Integer.valueOf(a);
@@ -34,8 +34,8 @@ public class StringTest {
 		}
 
 		System.out.println("result   nel  " + and.toString());
-		String up =and.toString();
-		System.out.println("all "+ up);
+		String up = and.toString();
+		System.out.println("all " + up);
 
 		char ch = ab.charAt(4);
 		System.out.println("second " + ch);
@@ -52,8 +52,13 @@ public class StringTest {
 			re = re + u.charAt(i);
 		}
 		System.out.println("reverse 2    " + re);
-		
-		
+
+	}
+
+	public static  void stre() {
+		String multi = "abc123abc123";
+		System.out.println(multi.replaceAll("abc", ""));
+
 	}
 
 }
