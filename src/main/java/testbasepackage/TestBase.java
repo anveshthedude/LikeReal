@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import utilities.Utilities;
 
@@ -17,7 +17,8 @@ public class TestBase {
 	public static Properties read; // teset
 
 	public TestBase() throws IOException {
-
+		
+		
 		String file = "win";
 
 		if (file.equals("air")) {

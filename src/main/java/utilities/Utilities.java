@@ -31,4 +31,11 @@ public class Utilities extends TestBase {
 		driver.switchTo().frame("slots");
 
 	}
+	
+	public  void implicitwait() {
+		
+	}
+	
+	
+	
 }
