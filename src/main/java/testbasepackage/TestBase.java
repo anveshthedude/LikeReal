@@ -62,7 +62,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
-		driver.get(read.getProperty("portalurl"));
+		driver.get(read.getProperty("url"));
 		driver.manage().deleteAllCookies();
 
 	}

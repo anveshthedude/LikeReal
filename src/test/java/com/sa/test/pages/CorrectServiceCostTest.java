@@ -17,6 +17,7 @@ import com.sa.pages.ServicesTab;
 import com.sa.pages.SettingsPage;
 
 import testbasepackage.TestBase;
+import utilities.Utilities;
 
 public class CorrectServiceCostTest extends TestBase {
 	LoginPage loginpage;
@@ -41,7 +42,7 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 
-	//@Test(priority = 2)
+	// @Test(priority = 2)
 	public void updatesetting() throws Exception {
 		homepage = new HomePage();
 		settingspage = homepage.clickonsettings();
@@ -51,7 +52,7 @@ public class CorrectServiceCostTest extends TestBase {
 
 	}
 
-	@Test//(priority = 1,dependsOnMethods = {"updatesetting"})
+	@Test // (priority = 1,dependsOnMethods = {"updatesetting"})
 	public void servicecosttest() throws Exception {
 		homepage = new HomePage();
 		homepage.CVlink();
@@ -60,6 +61,7 @@ public class CorrectServiceCostTest extends TestBase {
 		customerview = new CustomerView();
 		customerview.cvlogin();
 		customerview.clickonservicestab();
+		Utilities.takescreenshot("spark");
 		cvservicespage = new CVServicesPage();
 		String servicecost = cvservicespage.verifyservicecost();
 		System.out.println(servicecost);

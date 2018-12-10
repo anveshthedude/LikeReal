@@ -2,26 +2,63 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="208182" started-at="2018-11-28T11:23:48Z" finished-at="2018-11-28T11:27:16Z">
+  <suite name="Default suite" duration-ms="289630" started-at="2018-12-10T13:39:43Z" finished-at="2018-12-10T13:44:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="208182" started-at="2018-11-28T11:23:48Z" finished-at="2018-11-28T11:27:16Z">
-      <class name="com.sa.test.pages.HomePageTest2">
-        <test-method status="FAIL" signature="sparktest()[pri:0, instance:com.sa.test.pages.HomePageTest2@735b5592]" name="sparktest" duration-ms="208156" started-at="2018-11-28T16:53:48Z" finished-at="2018-11-28T16:57:16Z">
-          <exception class="org.apache.xmlbeans.impl.values.XmlValueDisconnectedException">
+    <test name="Default test" duration-ms="289630" started-at="2018-12-10T13:39:43Z" finished-at="2018-12-10T13:44:33Z">
+      <class name="com.sa.test.pages.CorrectServiceCostTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@51565ec2]" name="setup" is-config="true" duration-ms="35872" started-at="2018-12-10T19:09:43Z" finished-at="2018-12-10T19:10:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="servicecosttest()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@51565ec2]" name="servicecosttest" duration-ms="111665" started-at="2018-12-10T19:10:19Z" finished-at="2018-12-10T19:12:11Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='selection-item']"}
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANVESH~1.DUR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
+Session ID: 55716391a11b8fba47a65cca7689a528
+*** Element info: {Using=xpath, value=//a[@class='selection-item']}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[org.apache.xmlbeans.impl.values.XmlValueDisconnectedException
-	at org.apache.xmlbeans.impl.values.XmlObjectBase.check_orphaned(XmlObjectBase.java:1213)
-	at org.apache.xmlbeans.impl.values.XmlObjectBase.newCursor(XmlObjectBase.java:243)
-	at org.apache.xmlbeans.impl.values.XmlComplexContentImpl.arraySetterHelper(XmlComplexContentImpl.java:1073)
-	at org.openxmlformats.schemas.spreadsheetml.x2006.main.impl.CTFontsImpl.setFontArray(Unknown Source)
-	at org.apache.poi.xssf.model.StylesTable.writeTo(StylesTable.java:385)
-	at org.apache.poi.xssf.model.StylesTable.commit(StylesTable.java:443)
-	at org.apache.poi.POIXMLDocumentPart.onSave(POIXMLDocumentPart.java:313)
-	at org.apache.poi.POIXMLDocumentPart.onSave(POIXMLDocumentPart.java:317)
-	at org.apache.poi.POIXMLDocument.write(POIXMLDocument.java:173)
-	at com.sa.test.pages.HomePageTest2.excelfilewrite(HomePageTest2.java:55)
-	at com.sa.test.pages.HomePageTest2.sparktest(HomePageTest2.java:140)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='selection-item']"}
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANVESH~1.DUR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
+Session ID: 55716391a11b8fba47a65cca7689a528
+*** Element info: {Using=xpath, value=//a[@class='selection-item']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.cv.pages.BookNow.checkstaffprice(BookNow.java:25)
+	at com.sa.test.pages.CorrectServiceCostTest.servicecosttest(CorrectServiceCostTest.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,11 +85,60 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.apache.xmlbeans.impl.values.XmlValueDisconnectedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sparktest -->
-      </class> <!-- com.sa.test.pages.HomePageTest2 -->
+        </test-method> <!-- servicecosttest -->
+        <test-method status="FAIL" signature="close()[pri:0, instance:com.sa.test.pages.CorrectServiceCostTest@51565ec2]" name="close" is-config="true" duration-ms="0" started-at="2018-12-10T19:12:11Z" finished-at="2018-12-10T19:12:11Z">
+          <exception class="org.openqa.selenium.NoSuchFrameException">
+            <message>
+              <![CDATA[No frame element found by name or id header
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchFrameException: No frame element found by name or id header
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'INLAPIWIN10028', ip: '192.168.9.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:881)
+	at utilities.Utilities.framehead(Utilities.java:24)
+	at com.sa.pages.ServicesTab.SignOut(ServicesTab.java:84)
+	at com.sa.test.pages.CorrectServiceCostTest.close(CorrectServiceCostTest.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.sa.test.pages.CorrectServiceCostTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

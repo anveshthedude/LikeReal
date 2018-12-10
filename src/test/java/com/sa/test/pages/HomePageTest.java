@@ -180,6 +180,7 @@ public class HomePageTest extends TestBase {
 	@AfterMethod
 	public void tierdown() {
 		driver.quit(); // is not working
+	
 
 	}
 
