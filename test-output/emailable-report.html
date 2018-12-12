@@ -31,32 +31,17 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">289.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">234.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">com.sa.test.pages.CorrectServiceCostTest</td><td><a href="#m1"><b>close</b>  </a></td><td class="numi">1</td><td>1544449331066</td><td class="numi">0</td></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">com.sa.test.pages.CorrectServiceCostTest</td><td><a href="#m2"><b>servicecosttest</b>  </a></td><td class="numi">1</td><td>1544449219392</td><td class="numi">111665</td></tr>
+<tr class="failedodd"><td rowspan="1">com.sa.test.pages.CorrectServiceCostTest</td><td><a href="#m1"><b>servicecosttest</b>  </a></td><td class="numi">1</td><td>1544607192705</td><td class="numi">101105</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">com.sa.test.pages.CorrectServiceCostTest:close</h2>
+<h2 id="m1">com.sa.test.pages.CorrectServiceCostTest:servicecosttest</h2>
 <div style="padding-left:3em">
-<p>No frame element found by name or id header
-Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
-System info: host: &apos;INLAPIWIN10028&apos;, ip: &apos;192.168.9.75&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:881)
-<br/>at utilities.Utilities.framehead(Utilities.java:24)
-<br/>at com.sa.pages.ServicesTab.SignOut(ServicesTab.java:84)
-<br/>at com.sa.test.pages.CorrectServiceCostTest.close(CorrectServiceCostTest.java:79)
-<br/>27 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.sa.test.pages.CorrectServiceCostTest:servicecosttest</h2>
-<div style="padding-left:3em">
-<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;selection-item&apos;]&quot;}
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;fl-preview-link&apos;]&quot;}
   (Session info: chrome=70.0.3538.110)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -65,8 +50,8 @@ Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &a
 System info: host: &apos;INLAPIWIN10028&apos;, ip: &apos;192.168.9.75&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANVESH~1.DUR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 55716391a11b8fba47a65cca7689a528
-*** Element info: {Using=xpath, value=//a[@class=&apos;selection-item&apos;]}</p>
+Session ID: c23c500ee0194f95179255b5837a3869
+*** Element info: {Using=xpath, value=//a[@class=&apos;fl-preview-link&apos;]}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -85,9 +70,9 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
 <br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 <br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-<br/>at com.sun.proxy.$Proxy9.click(Unknown Source)
-<br/>at com.cv.pages.BookNow.checkstaffprice(BookNow.java:25)
-<br/>at com.sa.test.pages.CorrectServiceCostTest.servicecosttest(CorrectServiceCostTest.java:70)
+<br/>at com.sun.proxy.$Proxy10.click(Unknown Source)
+<br/>at com.sa.pages.CVLinkpage.gotocv(CVLinkpage.java:33)
+<br/>at com.sa.test.pages.CorrectServiceCostTest.servicecosttest(CorrectServiceCostTest.java:62)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>

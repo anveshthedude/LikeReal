@@ -47,5 +47,10 @@ public class Utilities extends TestBase {
 		FileUtils.copyFile(fil, new File(
 				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg"));
 	}
+	
+	
+	public static void retrytest() {
+		
+	}
 
 }
