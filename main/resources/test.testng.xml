@@ -1,7 +1,12 @@
 <suite name="AutoPractice">
+
+	<listeners>
+		<listener class-name="utilities.RetryListener" />
+	</listeners>
+
+
 	<test name="AllCalssesTest">
 		<classes>
-			<class name="com.sa.test.pages.Loginpagetest" />
 			<class name="com.sa.test.pages.Staffaccesstypetest" />
 		</classes>
 	</test>

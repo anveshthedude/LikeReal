@@ -26,7 +26,7 @@ public class ZendeskPageLinks extends TestBase {
 	}
 
 	@Test
-	public void links() throws Exception {  //to update
+	public void links() throws Exception { // to update
 
 		initizlization();
 		/*
@@ -45,7 +45,7 @@ public class ZendeskPageLinks extends TestBase {
 			String alllinks = li.getAttribute("href");
 			URL url = new URL(alllinks);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.connect();
+			//connection.connect();
 			if (connection.getResponseCode() == 200) {
 				activelinks.add(links.get(a));
 
@@ -59,4 +59,4 @@ public class ZendeskPageLinks extends TestBase {
 
 	}
 
-}   //sucess
+} // sucess

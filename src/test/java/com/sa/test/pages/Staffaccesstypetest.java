@@ -33,11 +33,11 @@ public class Staffaccesstypetest extends TestBase {
 
 	}
 
-	@Test(priority = 2,dependsOnMethods= {"VerifyStaffDaysUpdatetest"})
+	@Test(priority = 2) // ,dependsOnMethods= {"VerifyStaffDaysUpdatetest"})
 	public void verifyifaccesstypeselected() throws IOException, InterruptedException {
 
 		boolean nine = stafftabpage.CheckifAccesstypeIsSelected();
-		Assert.assertEquals(nine, true);
+		Assert.assertEquals(nine, false);
 
 	}
 
