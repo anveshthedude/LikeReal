@@ -154,7 +154,6 @@ public class CustomersTab extends TestBase {
 		driver.switchTo().window(h3);
 
 		System.out.println("Cancellation reason window " + driver.getTitle());
-		
 
 		canclreason.sendKeys("aptest");
 		canclwithreasonbutn.click();

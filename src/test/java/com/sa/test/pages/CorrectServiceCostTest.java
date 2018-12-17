@@ -64,7 +64,7 @@ public class CorrectServiceCostTest extends TestBase {
 		customerview = new CustomerView();
 		customerview.cvlogin();
 		customerview.clickonservicestab();
-		Utilities.takescreenshot("spark");
+		//Utilities.takescreenshot("spark");
 		cvservicespage = new CVServicesPage();
 		String servicecost = cvservicespage.verifyservicecost();
 		System.out.println(servicecost);

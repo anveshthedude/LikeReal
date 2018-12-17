@@ -42,8 +42,8 @@ public class CustomerView extends TestBase {
 
 	public CVServicesPage clickonservicestab() throws Exception {
 		
-		Actions action = new Actions(driver);
-		action.doubleClick(cvservicetab).build().perform();
+		/*Actions action = new Actions(driver);
+		action.doubleClick(cvservicetab).build().perform();*/
 		
 		cvservicetab.click();
 		//Thread.sleep(5000);
