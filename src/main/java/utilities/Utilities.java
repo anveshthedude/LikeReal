@@ -6,6 +6,11 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testbasepackage.TestBase;
 
@@ -46,6 +51,12 @@ public class Utilities extends TestBase {
 		File fil = screnshot.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fil, new File(
 				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg"));
+	}
+
+	public static void explicitwait(WebDriver driver, int waitTime, WebElement element) {
+
+		new WebDriverWait(driver, waitTime).until(ExpectedConditions.visibilityOf(element));
+
 	}
 
 }

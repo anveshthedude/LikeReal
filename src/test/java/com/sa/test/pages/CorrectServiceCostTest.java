@@ -31,7 +31,7 @@ public class CorrectServiceCostTest extends TestBase {
 	CustomerView customerview;
 	CVServicesPage cvservicespage;
 	BookNow booknow;
-
+	
 	public CorrectServiceCostTest() throws IOException {
 		super();
 
@@ -42,7 +42,7 @@ public class CorrectServiceCostTest extends TestBase {
 		initizlization();
 		loginpage = new LoginPage();
 		homepage = loginpage.ValidateloginPagetitle();
-
+		
 	}
 
 	// @Test(priority = 2)

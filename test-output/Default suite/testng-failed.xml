@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sa.test.pages.CorrectServiceCostTest">
+      <class name="com.sa.test.pages.Staffaccesstypetest">
         <methods>
-          <include name="close"/>
+          <include name="verifyifaccesstypeselected"/>
           <include name="setup"/>
-          <include name="servicecosttest"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- com.sa.test.pages.CorrectServiceCostTest -->
+      </class> <!-- com.sa.test.pages.Staffaccesstypetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
