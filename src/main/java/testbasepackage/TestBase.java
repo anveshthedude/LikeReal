@@ -12,13 +12,13 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import utilities.Utilities;
 
 public class TestBase {
-
+	 //public static HtmlUnitDriver driver;
 	public static WebDriver driver;
 	public static Properties read; // teset
 
 	public TestBase() throws IOException {
 
-		String file = "win";
+		String file = "air";
 
 		if (file.equals("air")) {
 			read = new Properties();
@@ -44,7 +44,8 @@ public class TestBase {
 			System.setProperty("webdriver.chrome.driver",
 					"/Users/anveshdurgam/Applications/Chrome Apps.localized/chromedriver");
 			driver = new ChromeDriver();
-
+			
+			//driver = new HtmlUnitDriver();
 		} else {
 			/*
 			 * ChromeOptions options = new ChromeOptions();
@@ -53,7 +54,7 @@ public class TestBase {
 			 */
 			/*System.setProperty("webdriver.chrome.driver",
 					"D:\\Softwares\\Chromedriver\\chromedriver_win32\\chromedriver.exe");*/
-			driver = new HtmlUnitDriver();
+			//driver = new HtmlUnitDriver();
 		}
 
 		// driver.manage().window().maximize();
@@ -61,7 +62,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
-		driver.get(read.getProperty("testurl"));
+		driver.get(read.getProperty("url"));
 		driver.manage().deleteAllCookies();
 
 	}

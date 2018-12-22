@@ -10,7 +10,7 @@ public class ScreenshotListener implements ITestListener {
 
 	public ScreenshotListener() throws IOException {
 		super();
-		
+
 	}
 
 	public void onTestStart(ITestResult result) {
