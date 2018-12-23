@@ -55,7 +55,7 @@ public class StringTest {
 
 	}
 
-	public static  void stre() {
+	public static void stre() {
 		String multi = "abc123abc123";
 		System.out.println(multi.replaceAll("abc", ""));
 
