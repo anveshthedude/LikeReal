@@ -8,6 +8,10 @@ public class StringTest {
 	public static void main(String[] args) {
 		stre();
 		String a = "12341";
+		
+		String avh ="abc123abc8464";
+		avh= avh.replace("8464", "");
+		System.out.println("replace all "+avh);
 
 		int b = Integer.valueOf(a);
 		System.out.println(b);
