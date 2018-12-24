@@ -25,8 +25,8 @@ public class ScreenshotListener implements ITestListener {
 		System.out.println("Test is failed");
 		try {
 			Utilities.takescreenshot("the Screen");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) { // using this class in CorrectServiceCostTest (Test class)
+			
 			e.printStackTrace();
 		}
 	}
