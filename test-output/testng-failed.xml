@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [AutoPractice]">
+  <listeners>
+    <listener class-name="utilities.RetryListener"/>
+  </listeners>
+  <test name="AllCalssesTest(failed)">
     <classes>
-      <class name="com.sa.test.pages.ZendeskPageLinks">
+      <class name="com.sa.test.pages.Staffaccesstypetest">
         <methods>
-          <include name="links"/>
+          <include name="verifyifaccesstypeselected"/>
+          <include name="setup"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- com.sa.test.pages.ZendeskPageLinks -->
+      </class> <!-- com.sa.test.pages.Staffaccesstypetest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- AllCalssesTest(failed) -->
+</suite> <!-- Failed suite [AutoPractice] -->

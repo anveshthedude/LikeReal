@@ -58,9 +58,9 @@ public class TestBase {
 		}
 
 		// driver.manage().window().maximize();
-		driver.manage().window().setPosition(new Point(400,200));
+		//driver.manage().window().setPosition(new Point(400,200));
 		//Thread.sleep(3000);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Utilities.Pageloadtime, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Utilities.Implicitwait, TimeUnit.SECONDS);
