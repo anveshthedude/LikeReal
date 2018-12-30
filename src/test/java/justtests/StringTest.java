@@ -1,7 +1,6 @@
 package justtests;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Properties;
@@ -20,7 +19,7 @@ public class StringTest {
 
 		avh = avh.replace("8464", "8888"); // To Replace data from a String like
 											// 8464 to 8888
-		// avh= avh.replaceAll("[^A-Z]", ""); // to Get only capital A-Z, if you need only caps letters from String then [^A-Z].
+		 avh= avh.replaceAll("[^A-Z]", ""); // to Get only capital A-Z, if you need only caps letters from String then [^A-Z].
 		
 		System.out.println("replace all " + avh);
 
@@ -85,7 +84,7 @@ public class StringTest {
 
 		
 		XSSFWorkbook name = new XSSFWorkbook(); // To read excel sheet. Add reference variable of fileiputstream in XssfWorkbook constructor like XSSFWorkbook(file); 
-		name.getSheet("sheet name");
+		//name.getSheet("sheet name");
 		XSSFSheet name2 = name.getSheet("sheet name");
 		name2.getLastRowNum();
 		
