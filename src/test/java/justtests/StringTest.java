@@ -15,6 +15,10 @@ public class StringTest {
 		stre();
 		String a = "12345";
 
+		a.indexOf(4);
+		a.charAt(0);
+
+
 		String avh = "abc123abc8464AFKJAKJDFOI9VAEW";
 
 		avh = avh.replace("8464", "8888"); // To Replace data from a String like
@@ -65,6 +69,7 @@ public class StringTest {
 															 																										 
 
 		int h = u.length();
+	
 		String re = "";
 
 		for (int i = h - 1; i >= 0; i--) {
