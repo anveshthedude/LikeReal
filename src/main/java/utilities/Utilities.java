@@ -49,12 +49,28 @@ public class Utilities extends TestBase {
 		TakesScreenshot screnshot = ((TakesScreenshot) driver);
 		File fil = screnshot.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fil, new File(
-				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg"));
+				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg")); 
 	}
 
 	public static void explicitwait(WebDriver driver, int waitTime, WebElement element) {
 
-		new WebDriverWait(driver, waitTime).until(ExpectedConditions.visibilityOf(element));
+		WebDriverWait wai = new WebDriverWait(driver, waitTime);
+		wai.until(ExpectedConditions.visibilityOf(element));
+		
+		wai.until(ExpectedConditions.elementToBeClickable(element));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 

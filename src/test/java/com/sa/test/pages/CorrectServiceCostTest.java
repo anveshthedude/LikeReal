@@ -64,7 +64,7 @@ public class CorrectServiceCostTest extends TestBase {
 		customerview = new CustomerView();
 		customerview.cvlogin();
 		customerview.clickonservicestab();
-		//Utilities.takescreenshot("spark");
+		Utilities.takescreenshot("spark");
 		cvservicespage = new CVServicesPage();
 		String servicecost = cvservicespage.verifyservicecost();
 		System.out.println(servicecost);
@@ -77,9 +77,9 @@ public class CorrectServiceCostTest extends TestBase {
 
 	@AfterMethod
 	public void close() throws Exception {
-		servicestab = new ServicesTab();
+		/*servicestab = new ServicesTab();
 		driver.switchTo().defaultContent();
-		servicestab.SignOut();
+		servicestab.SignOut();*/
 		driver.quit();
 
 	}

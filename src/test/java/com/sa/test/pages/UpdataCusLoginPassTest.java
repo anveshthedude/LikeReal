@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.sa.pages.CustomersTab;
@@ -13,7 +14,7 @@ import com.sa.pages.LoginPage;
 import junit.framework.Assert;
 import testbasepackage.TestBase;
 import utilities.Utilities;
-
+@Listeners(utilities.ScreenshotListener.class)
 public class UpdataCusLoginPassTest extends TestBase {
 	LoginPage loginpage;
 	CustomersTab customertab;

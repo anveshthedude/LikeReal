@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+
 public class ScreenshotListener implements ITestListener {
 
 	public ScreenshotListener() throws IOException {
@@ -25,7 +26,7 @@ public class ScreenshotListener implements ITestListener {
 		System.out.println("Test is failed");
 		try {
 			Utilities.takescreenshot("the Screen");
-		} catch (IOException e) { // using this class in CorrectServiceCostTest (Test class)
+		} catch (IOException e) { // using this class in CorrectServiceCostTest (@Test class)
 			
 			e.printStackTrace();
 		}

@@ -31,52 +31,87 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">AllCalssesTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">213.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">159.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">AllCalssesTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="3">com.sa.test.pages.Staffaccesstypetest</td><td><a href="#m1"><b>verifyifaccesstypeselected</b>  </a></td><td class="numi">3</td><td>1545892594685</td><td class="numi">105665</td></tr><tr class="failedodd"><td><a href="#m2"><b>verifyifaccesstypeselected</b>  </a></td><td class="numi">3</td><td>1545892594685</td><td class="numi">105665</td></tr><tr class="failedodd"><td><a href="#m3"><b>verifyifaccesstypeselected</b>  </a></td><td class="numi">3</td><td>1545892594685</td><td class="numi">105665</td></tr>
-<tr><th colspan="4">AllCalssesTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">com.sa.test.pages.Staffaccesstypetest</td><td><a href="#m4"><b>VerifyStaffDaysUpdatetest</b>  </a></td><td class="numi">1</td><td>1545892534151</td><td class="numi">24566</td></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">com.sa.test.pages.CorrectServiceCostTest</td><td><a href="#m1"><b>close</b>  </a></td><td class="numi">1</td><td>1546237860911</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.sa.test.pages.CorrectServiceCostTest</td><td><a href="#m2"><b>servicecosttest</b>  </a></td><td class="numi">1</td><td>1546237750950</td><td class="numi">109593</td></tr>
 </table>
-<h1>AllCalssesTest</h1>
-<h2 id="m1">com.sa.test.pages.Staffaccesstypetest:verifyifaccesstypeselected</h2>
+<h1>Default test</h1>
+<h2 id="m1">com.sa.test.pages.CorrectServiceCostTest:close</h2>
 <div style="padding-left:3em">
-<p>expected [false] but found [true]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:286)
-<br/>at org.testng.Assert.assertEquals(Assert.java:296)
-<br/>at com.sa.test.pages.Staffaccesstypetest.verifyifaccesstypeselected(Staffaccesstypetest.java:40)
-<br/>25 lines not shown
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;Anveshs-Air&apos;, ip: &apos;2401:4900:3687:a2cd:4c76:a0fe:13c5:44fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600229 (3fae4d0cda5334..., userDataDir: /var/folders/mr/3wvz10w50vg...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64317}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: 636a5a50ffb4cc7dfe4f2e3bc04a0c5f
+*** Element info: {Using=css selector, value=frame#header,iframe#header}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:349)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:420)
+<br/>at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:310)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:877)
+<br/>at utilities.Utilities.framehead(Utilities.java:28)
+<br/>at com.sa.pages.ServicesTab.SignOut(ServicesTab.java:84)
+<br/>at com.sa.test.pages.CorrectServiceCostTest.close(CorrectServiceCostTest.java:82)
+<br/>27 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.sa.test.pages.Staffaccesstypetest:verifyifaccesstypeselected</h2>
+<h2 id="m2">com.sa.test.pages.CorrectServiceCostTest:servicecosttest</h2>
 <div style="padding-left:3em">
-<p>expected [false] but found [true]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:286)
-<br/>at org.testng.Assert.assertEquals(Assert.java:296)
-<br/>at com.sa.test.pages.Staffaccesstypetest.verifyifaccesstypeselected(Staffaccesstypetest.java:40)
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;selection-item&apos;]&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;Anveshs-Air&apos;, ip: &apos;2401:4900:3687:a2cd:4c76:a0fe:13c5:44fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600229 (3fae4d0cda5334..., userDataDir: /var/folders/mr/3wvz10w50vg...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64317}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: 636a5a50ffb4cc7dfe4f2e3bc04a0c5f
+*** Element info: {Using=xpath, value=//a[@class=&apos;selection-item&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy10.click(Unknown Source)
+<br/>at com.cv.pages.BookNow.checkstaffprice(BookNow.java:25)
+<br/>at com.sa.test.pages.CorrectServiceCostTest.servicecosttest(CorrectServiceCostTest.java:73)
 <br/>25 lines not shown
 </div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.sa.test.pages.Staffaccesstypetest:verifyifaccesstypeselected</h2>
-<div style="padding-left:3em">
-<p>expected [false] but found [true]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:286)
-<br/>at org.testng.Assert.assertEquals(Assert.java:296)
-<br/>at com.sa.test.pages.Staffaccesstypetest.verifyifaccesstypeselected(Staffaccesstypetest.java:40)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.sa.test.pages.Staffaccesstypetest:VerifyStaffDaysUpdatetest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
