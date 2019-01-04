@@ -2,24 +2,59 @@ package justtests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Properties;
 import java.util.Set;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.ITestResult;
 
 public class StringTest {
 
 	public static void main(String[] args) throws IOException {
-		stre();
+		//stre();
 		String a = "12345";
+		
+		String a1 = "My life is moving  ";
 
-		a.indexOf(4);
-		a.charAt(0);
-
-
+		System.out.println("index "+a1.indexOf("v"));
+		System.out.println("charAT"+a1.charAt(5));
+		System.out.println("a1="+a1);
+		System.out.println("a1="+a1.trim());
+		System.out.println("compare"+a1.equalsIgnoreCase(a));
+		System.out.println("sub"+a1.substring(3, 7));
+		System.out.println("replaceal"+a1.replaceAll("My", "ur"));
+		System.out.println("REPLACE"+a1.replace(" ", "bike"));
+		
+		System.out.println("so"+a1.indexOf("i", a1.indexOf("i")+5));
+		
+		String one = "13579";
+		StringBuffer ss = new StringBuffer();
+		ss= ss.append(one);
+		
+		System.out.println("rever is rever"+ss.reverse());
+		String lie = "afkj123jdslfkj123ajflj123";
+		
+		
+		
+	String	li= lie.replaceAll("[^0-9]", "");
+	Set<Character> set = new HashSet<Character>();
+	StringBuffer nn = new StringBuffer();
+	
+	for (Character i = 0; i <= lie.length(); i++) {
+		Character al= li.charAt(i);
+		if(set.contains(i))
+			set.add(i);
+			nn.append(i);
+	}
+	
+		
+	System.out.println("li"+li);
+	
+	
+	
+System.out.println("*******************************************");
 		String avh = "abc123abc8464AFKJAKJDFOI9VAEW";
 
 		avh = avh.replace("8464", "8888"); // To Replace data from a String like
