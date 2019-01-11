@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -49,28 +51,14 @@ public class Utilities extends TestBase {
 		TakesScreenshot screnshot = ((TakesScreenshot) driver);
 		File fil = screnshot.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fil, new File(
-				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg")); 
+				"C:\\Users\\anvesh.durgam\\git\\LikeReal\\main\\resources\\screenshots\\" + screenshotOf + ".jpg"));
 	}
 
 	public static void explicitwait(WebDriver driver, int waitTime, WebElement element) {
 
 		WebDriverWait wai = new WebDriverWait(driver, waitTime);
 		wai.until(ExpectedConditions.visibilityOf(element));
-		
-		wai.until(ExpectedConditions.elementToBeClickable(element));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 
 	}
 

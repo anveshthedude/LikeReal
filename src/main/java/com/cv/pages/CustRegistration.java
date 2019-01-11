@@ -40,7 +40,7 @@ public class CustRegistration extends TestBase {
 		XSSFSheet sheet = book.getSheet("signup");
 
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-
+			
 			String firstname = sheet.getRow(i).getCell(0).getStringCellValue();
 			String lastname = sheet.getRow(i).getCell(1).getStringCellValue();
 			String email = sheet.getRow(i).getCell(2).getStringCellValue();
