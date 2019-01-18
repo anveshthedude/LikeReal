@@ -84,6 +84,16 @@ public class IntPractice {
 		File fil = take.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fil, new File("path"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		FileInputStream files = new FileInputStream("adfjl;aj");
+		
+		XSSFWorkbook book = new XSSFWorkbook(files);
+		XSSFSheet shet = book.getSheet("sheetname");
+		String fn = shet.getRow(2).getCell(4).getStringCellValue();
+		
+		
+		
+		
 
 	}
 
