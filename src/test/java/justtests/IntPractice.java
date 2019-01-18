@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -56,6 +57,7 @@ public class IntPractice {
 		Iterator<String> it = ows.iterator();
 		String one = it.next();
 		driver.switchTo().window("one");
+		driver.switchTo().window("fjal");
 
 		// ----------------------------------------
 		driver.switchTo().frame("ajf");
@@ -71,12 +73,17 @@ public class IntPractice {
 		Select sel = new Select(target);
 		sel.selectByValue("12");
 		sel.selectByVisibleText("test");
+		driver.switchTo().frame(10);
+		driver.switchTo().alert();
+		String nar = driver.switchTo().alert().getText();
+		nar.trim();
 
 		// --------------------------
 
 		TakesScreenshot take = (TakesScreenshot) driver;
 		File fil = take.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fil, new File("path"));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
