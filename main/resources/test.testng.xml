@@ -7,7 +7,24 @@
 
 	<test name="AllCalssesTest">
 		<classes>
-			<class name="com.sa.test.pages.Staffaccesstypetest" />
+			<class name="com.sa.test.pages.CancelApptFromApptHistory">
+			<methods>
+				<exclude> name ="CancelApptFromApptHistory.teardown"</exclude> // do not run this test from the above class.	
+				</methods>		
+			</class>
+			
+			<class name="com.sa.test.pages.CorrectServiceCostTest">
+			<methods>
+				<include name="CorrectServiceCostTest.updatesetting.*"</include> // execute all tests which starts with update
+				</methods>
+			</class>
+
+			<class name="com.sa.test.pages.Staffaccesstypetest">
+				<methods>
+					<include> name = "classname.methodname"</include> // execute only this test case from the above class
+					
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
