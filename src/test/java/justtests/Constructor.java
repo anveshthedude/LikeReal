@@ -1,7 +1,5 @@
 package justtests;
 
-import org.openqa.selenium.WebDriver;
-
 public class Constructor {
 
 	private String one;
