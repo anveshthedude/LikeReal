@@ -133,6 +133,7 @@ public class CustomersTab extends TestBase {
 		// String parent=driver.getWindowHandle();
 		thirdapptinhistory.click();
 		Set<String> windows = driver.getWindowHandles();
+		
 
 		Iterator<String> getwindow = windows.iterator();
 		String mainwin = getwindow.next();
