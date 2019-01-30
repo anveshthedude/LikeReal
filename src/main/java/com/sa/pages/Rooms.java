@@ -1,5 +1,48 @@
 package com.sa.pages;
 
-public class Rooms {
+import java.io.IOException;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import testbasepackage.TestBase;
+
+public class Rooms extends TestBase {
+
+	@FindBy(xpath = "//a[@id='fl-navtab-item-rooms-id']")
+	public static WebElement roomstab;
+
+	@FindBy(xpath = "//a[@id='fl-sidenav-addroom-id']")
+	public static WebElement roomsatleft;
+
+	@FindBy(xpath = "//a[@id='fl-sidenav-addroom-id']")
+	public static WebElement addnewroom;
+
+	@FindBy(xpath = "//input[@value='Active']")
+	public static WebElement statusactive;
+
+	public Rooms() throws IOException {
+		PageFactory.initElements(driver, this);
+
+	}
+
+	public void clickonRoomstab() {
+		roomstab.click();
+	}
+
+	public void clickonallrooms() {
+		roomsatleft.click();
+
+	}
+
+	public void clickOnaAddNewRoom() {
+		addnewroom.click();
+
+	}
+
+	public boolean roomstatusactive() {
+		return statusactive.isSelected();
+	}
 
 }
