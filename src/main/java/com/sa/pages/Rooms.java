@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import testbasepackage.TestBase;
+import utilities.Utilities;
 
 public class Rooms extends TestBase {
 
@@ -21,6 +22,15 @@ public class Rooms extends TestBase {
 
 	@FindBy(xpath = "//input[@value='Active']")
 	public static WebElement statusactive;
+
+	@FindBy(xpath = "//div[contains(text(),'Testing for Brian')]")
+	public static WebElement roomname;
+
+	@FindBy(xpath = "//input[@name='screen_name']")
+	public static WebElement roomscreenname;
+
+	@FindBy(xpath = "//*[contains(text(),'Test ROOM')]")
+	public static WebElement roomnameinlist;
 
 	public Rooms() throws IOException {
 		PageFactory.initElements(driver, this);
@@ -41,8 +51,25 @@ public class Rooms extends TestBase {
 
 	}
 
-	public boolean roomstatusactive() {
+	public boolean roomstatusactive() throws IOException {
+
+		Utilities.explicitwait(driver, 5, statusactive);
 		return statusactive.isSelected();
+	}
+
+	public boolean roomname() {
+		Utilities.explicitwait(driver, 5, roomname);
+		return roomname.isDisplayed();
+
+	}
+
+	public boolean roomscreenname() {
+		return roomscreenname.isDisplayed();
+	}
+
+	public void roomnameinlist() {
+		roomnameinlist.click();
+
 	}
 
 }
