@@ -17,6 +17,7 @@ public class RoomsTest extends TestBase {
 	Rooms room;
 	Utilities utilities;
 	LoginPage loginpage;
+
 	public RoomsTest() throws IOException {
 		super();
 
@@ -25,12 +26,11 @@ public class RoomsTest extends TestBase {
 	@BeforeMethod
 	public void setup() throws Exception {
 		initizlization();
-		loginpage = new LoginPage(); 
+		loginpage = new LoginPage();
 		loginpage.ValidateloginPagetitle();
 	}
-	
-	
-	@Test
+
+	@Test(priority =1, groups = {"rooms"},description = "Room status is fine")
 	public void VerifyRoomStatus() throws IOException {
 		utilities = new Utilities();
 		utilities.framehead();
@@ -43,10 +43,29 @@ public class RoomsTest extends TestBase {
 		utilities.framemid();
 		boolean status = room.roomstatusactive();
 		System.out.println("Expecting False");
-		Assert.assertEquals(status, true);
+		Assert.assertEquals(status, false);
 
 	}
-	
+
+	@Test(priority =2,groups = {"rooms"}, description = "Room title is fine")
+	public void verifyRoomisVisible() throws IOException {
+		utilities = new Utilities();
+		utilities.framehead();
+		room = new Rooms();
+		room.clickonRoomstab();
+		driver.switchTo().defaultContent();
+		utilities.framemid();
+		room.roomnameinlist();
+		driver.switchTo().defaultContent();
+		utilities.frameside();
+		boolean roomnameAtLeft = room.roomname();
+		driver.switchTo().defaultContent();
+		utilities.framemid();
+		boolean roomScreenname = room.roomscreenname();
+		Assert.assertEquals(roomnameAtLeft, roomScreenname);
+
+	}
+
 	@AfterMethod
 	public void close() {
 		driver.quit();
